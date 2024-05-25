@@ -5,15 +5,21 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("../fonts/Inter-Medium.otf");
+  font-family: "Inter-medium";
+  src: url("../fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("../fonts/Inter-Regular.ttf");
   font-weight: 500;
   font-style: normal;
 }
 html, body {
   margin: 0;
   padding: 0;
-  font-family: Inter, sans-serif;
+  font-family: Inter-medium, sans-serif;
   background-color: #FFFFFF;
   width: 100vw;
 }

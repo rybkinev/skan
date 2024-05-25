@@ -2,6 +2,9 @@ import React from 'react';
 import "../static/css/App.css"
 import {Route, Routes, useNavigate} from "react-router-dom";
 import Header from "./Header";
+import Footer from "./Footer";
+import Main from "./Main";
+
 
 export default function App() {
   // const navigate = useNavigate();
@@ -13,8 +16,8 @@ export default function App() {
   return (
     <>
       <Header/>
-      <h1>TEST</h1>
-      {/*<Header />*/}
+      <Main/>
+      <Footer/>
 
       {/*<Routes>*/}
       {/*  <Route path='/home' >*/}
