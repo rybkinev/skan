@@ -6,4 +6,15 @@ html, body {
   padding: 0;
   font-family: Inter, sans-serif;
   background-color: $main-color3;
+  width: 100vw;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $main-color2;
+  text-decoration: none;
+}
+
