@@ -1,0 +1,30 @@
+$main-color1: #029491;
+$main-color2: #000000;
+$main-color3: #FFFFFF;
+
+$add-color1: #FFB64F;
+$add-color2: #7CE3E1;
+$add-color3: #5970FF;
+
+//Font Ferry
+//Weight  900
+//Size  45px
+//Line height  54px
+
+//Font Inter
+//Weight  500
+//Size  50px
+//Line height  60.51px
+@font-face {
+    font-family: 'ferry';
+    src: url('../fonts/ferry_black.otf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Medium.otf');
+    font-weight: 500;
+    font-style: normal;
+}
