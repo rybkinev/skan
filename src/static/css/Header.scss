@@ -1,21 +1,10 @@
 @import "Var";
+@import "Global";
 
 header {
-  position: fixed;
+  @include head-footer;
   top: 0;
-  left: 0;
-  width: 100%;
   height: 93px;
-
-  display: flex;
-  flex-direction: row;
-
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 0 5vw;
-
-  font-size: 14px;
 
   img {
     object-fit: cover;
