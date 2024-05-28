@@ -13,7 +13,7 @@
 @font-face {
   font-family: "Inter-regular";
   src: url("../fonts/Inter-Regular.ttf");
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
 }
 html, body {
@@ -21,7 +21,23 @@ html, body {
   padding: 0;
   font-family: Inter-medium, sans-serif;
   background-color: #FFFFFF;
-  width: 100vw;
+  width: 100%;
+  font-size: 16px;
+}
+@media (max-width: 1024px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  html, body {
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  html, body {
+    font-size: 10px;
+  }
 }
 
 * {

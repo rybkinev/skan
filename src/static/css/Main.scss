@@ -1,5 +1,59 @@
 @import "Var";
+@import "Global";
 
 main {
   margin: 15vh 5vw;
+
+  .about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding-bottom: 10vh;
+
+    background-image: url('/public/img/main_1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    .left {
+
+      p {
+        font-family: Inter-regular, sans-serif;
+        max-width: 37vw;
+        font-size: 1.25rem;
+        margin-bottom: 8vh;
+      }
+
+      a{
+        padding: 1rem 3rem;
+        background-color: $add-color3;
+        color: $main-color3;
+      }
+    }
+
+    //img {
+    //  object-fit: contain;
+    //
+    //  height: 100%;
+    //  z-index: 0;
+    //  right: 0;
+    //}
+
+    h1 {
+      font-family: ferry, sans-serif;
+      font-size: 3.5rem;
+    }
+  }
+
+  .why-us {
+    //width: 90%;
+  }
+
+    .img-why-us {
+      width: 100%;
+    }
+
+  .main-rates{
+    //width: 90%;
+  }
 }

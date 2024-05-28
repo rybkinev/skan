@@ -5,6 +5,7 @@ header {
   @include head-footer;
   top: 0;
   height: 93px;
+  background-color: $main-color3;
 
   img {
     object-fit: cover;
