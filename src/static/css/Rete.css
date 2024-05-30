@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "ferry";
+  src: url("../fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("../fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("../fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+.rate-container {
+  height: 540px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+}
+.rate-container.active.beginer {
+  border: 2px solid #FFB64F;
+}
+.rate-container.active.pro {
+  border: 2px solid #7CE3E1;
+}
+.rate-container.active.business {
+  border: 2px solid #000000;
+}
+.rate-container .rate-header {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 8px 8px 0 0;
+}
+.rate-container .rate-header.beginer {
+  background-color: #FFB64F;
+}
+.rate-container .rate-header.pro {
+  background-color: #7CE3E1;
+}
+.rate-container .rate-header.business {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+.rate-container .rate-header .rate-name {
+  font-family: Inter, sans-serif;
+  font-size: 2rem;
+}
+.rate-container .rate-header .rate-description {
+  font-family: Inter-regular, sans-serif;
+  font-size: 1.1rem;
+}
+.rate-container .rate-header img {
+  height: 83px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.rate-container .rate-main {
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  position: relative;
+}
+.rate-container .rate-main .rate-price .price {
+  margin-right: 1.5rem;
+  font-size: 1.9rem;
+}
+.rate-container .rate-main .rate-price .price-before {
+  text-decoration: line-through;
+  opacity: 50%;
+  font-size: 1.5rem;
+}
+.rate-container .rate-main .rate-price-description {
+  font-family: Inter-regular, sans-serif;
+  font-size: 1.1rem;
+}
+.rate-container .rate-main .rate-include {
+  position: relative;
+  margin-top: 3vh;
+}
+.rate-container .rate-main .rate-include span {
+  font-family: Inter, sans-serif;
+  font-size: 1.4rem;
+}
+.rate-container .rate-main .rate-include ul {
+  position: relative;
+  padding-left: 0;
+  list-style-type: none;
+  font-family: Inter-regular, sans-serif;
+}
+.rate-container .rate-main .rate-include ul li {
+  padding-left: 1.8rem;
+  background-image: url("/public/img/list-style 96x96.png");
+  background-position: 0 0;
+  background-size: 1.2rem 1.2rem;
+  background-repeat: no-repeat;
+  margin: 0.5rem 0;
+}
+.rate-container .rate-main a {
+  position: absolute;
+  width: calc(100% - 3rem);
+  bottom: 1.5rem;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #5970FF;
+  color: #FFFFFF;
+  border-radius: 5px;
+  font-family: Inter-regular, sans-serif;
+  font-size: 1.2rem;
+}
+.rate-container .rate-main a.active {
+  background-color: #D2D2D2;
+  color: #000000;
+}
+.rate-container .rate-main .stick-active {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #3BA5E0;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-family: Inter-regular, sans-serif;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  margin-top: 0.6rem;
+  margin-right: 0.6rem;
+}
+
+/*# sourceMappingURL=Rete.css.map */

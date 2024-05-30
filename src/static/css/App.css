@@ -40,6 +40,11 @@ html, body {
   }
 }
 
+#root {
+  display: grid;
+  place-items: center;
+}
+
 * {
   box-sizing: border-box;
 }

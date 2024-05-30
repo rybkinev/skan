@@ -3,6 +3,9 @@
 
 header {
   @include head-footer;
+  position: fixed;
+  z-index: 999;
+  left: 0;
   top: 0;
   height: 93px;
   background-color: $main-color3;

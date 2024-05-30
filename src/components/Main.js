@@ -1,11 +1,13 @@
 import React from "react";
 import '../static/css/Main.css'
 import {Link} from "react-router-dom";
+import Carousel from "./Carousel";
+import Rates from "./Rates";
 
 export default () => {
   return (
     <main>
-      <div className='about-container'>
+      <section className='about-container'>
         <div className='left'>
           <h1>
             сервис по поиску<br/>
@@ -18,17 +20,18 @@ export default () => {
           </p>
           <Link to='/'>Запросить данные</Link>
         </div>
-        {/*<img src='/img/main_1.png' alt='Service'/>*/}
-      </div>
-      <div className='why-us'>
+        <img src='/img/main_1.png' alt='Service'/>
+      </section>
+      <section className='why-us'>
+        <h2>почему именно мы</h2>
+        <Carousel/>
+        <img className='img-why-us' src='/img/main-why-us.png' alt=''/>
+      </section>
 
-      </div>
-
-      <img className='img-why-us' src='/img/main-why-us.png' alt=''/>
-
-      <div className='main-rates'>
-
-      </div>
+      <section className='main-rates'>
+        <h2>наши тарифы</h2>
+        <Rates/>
+      </section>
 
     </main>
   )

@@ -16,7 +16,7 @@
   font-weight: 400;
   font-style: normal;
 }
-footer {
+header {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -24,29 +24,36 @@ footer {
   align-items: center;
   padding: 0 5vw;
   font-size: 14px;
-  bottom: 0;
-  height: 137px;
-  color: #FFFFFF;
-  background-color: #029491;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  height: 93px;
+  background-color: #FFFFFF;
 }
-footer img {
+header img {
   object-fit: cover;
   height: 100%;
 }
-footer .contact-container address {
-  text-align: end;
-  font-style: normal;
-  font-family: Inter-regular, sans-serif;
+header nav a {
+  margin: 0 3vw;
 }
-footer .contact-container address a {
-  color: #FFFFFF;
+header .auth-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-footer .contact-container address .contact-item {
-  text-align: right;
-  margin: 0;
+header .auth-container .divider {
+  width: 2px;
+  background-color: #7CE3E1;
+  margin: 0 1.5vw;
+  height: 1.65rem;
 }
-footer .contact-container address .copyright {
-  margin-top: 1rem;
+header .auth-container .button-login {
+  background-color: #7CE3E1;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
 }
 
-/*# sourceMappingURL=Footer.css.map */
+/*# sourceMappingURL=Header.css.map */

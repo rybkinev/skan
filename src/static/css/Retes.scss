@@ -1,0 +1,9 @@
+@import "Var";
+@import "Global";
+
+.rates-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 450px));
+  gap: 35px;
+  margin-top: 3vh;
+}

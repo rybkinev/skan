@@ -1,0 +1,134 @@
+@import "Var";
+@import "Global";
+
+.rate-container {
+  height: 540px;
+  //max-width: 450px;
+
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+
+  &.active.beginer {
+    border: 2px solid $add-color1;
+  }
+  &.active.pro {
+    border: 2px solid $add-color2;
+  }
+  &.active.business {
+    border: 2px solid $main-color2;
+  }
+
+  .rate-header {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 8px 8px 0 0;
+    //border-radius: 7px;
+
+    &.beginer {
+      background-color: $add-color1;
+    }
+    &.pro {
+      background-color: $add-color2;
+    }
+    &.business {
+      background-color: $main-color2;
+      color: $main-color3
+    }
+
+
+    .rate-name {
+      font-family: Inter, sans-serif;
+      font-size: 2rem;
+    }
+    .rate-description {
+      font-family: Inter-regular, sans-serif;
+      font-size: 1.1rem;
+    }
+    img {
+      height: 83px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  }
+  .rate-main {
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    position: relative;
+
+    .rate-price {
+      .price {
+        margin-right: 1.5rem;
+        font-size: 1.9rem;
+      }
+      .price-before {
+        text-decoration: line-through;
+        opacity: 50%;
+        font-size: 1.5rem;
+      }
+    }
+    .rate-price-description {
+      font-family: Inter-regular, sans-serif;
+      font-size: 1.1rem;
+    }
+
+    .rate-include {
+      position: relative;
+      margin-top: 3vh;
+      span {
+        font-family: Inter, sans-serif;
+        font-size: 1.4rem;
+      }
+      ul {
+        position: relative;
+        padding-left: 0;
+        list-style-type: none;
+        font-family: Inter-regular, sans-serif;
+
+        li {
+          padding-left: 1.8rem;
+          background-image: url('/public/img/list-style 96x96.png');
+          background-position: 0 0;
+          background-size: 1.2rem 1.2rem;
+          background-repeat: no-repeat;
+
+          margin: 0.5rem 0;
+        }
+      }
+    }
+
+    a {
+      position: absolute;
+      width: calc(100% - 3rem);
+      bottom: 1.5rem;
+      text-align: center;
+      padding: 1rem 0;
+      background-color: $add-color3;
+      color: $main-color3;
+      border-radius: 5px;
+      font-family: Inter-regular, sans-serif;
+      font-size: 1.2rem;
+
+      &.active {
+        background-color: #D2D2D2;
+        color: $main-color2;
+      }
+    }
+
+    & .stick-active {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: $add-color4;
+      border-radius: 10px;
+      color: $main-color3;
+      font-family: Inter-regular, sans-serif;
+      font-size: 0.8rem;
+      padding: 0.2rem 0.6rem;
+      margin-top: 0.6rem;
+      margin-right: 0.6rem;
+    }
+  }
+}

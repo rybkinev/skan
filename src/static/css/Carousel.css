@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "ferry";
+  src: url("../fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("../fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("../fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+.carousel {
+  width: 100%;
+  margin-left: 1vw;
+  margin-right: 0;
+}
+.carousel .container {
+  display: flex;
+  flex-direction: row;
+}
+.carousel .container .slick-arrow {
+  display: flex !important;
+  height: 39px;
+}
+.carousel .container .slick-arrow:before {
+  content: "";
+}
+.carousel .container .card-container {
+  padding: 15px 0;
+}
+.carousel .container .card-container img {
+  height: 64px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.carousel .container .card-container .card {
+  height: 225px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: Inter-regular, sans-serif;
+  font-size: 1rem;
+  text-align: left;
+  padding: 1vw;
+  margin: 0 1vw;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*# sourceMappingURL=Carousel.css.map */
