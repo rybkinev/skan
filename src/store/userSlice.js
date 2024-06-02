@@ -32,6 +32,7 @@ const userSlice = createSlice({
       state.isAuthenticated = true;
       localStorage.setItem('accessToken', action.payload.accessToken);
       localStorage.setItem('expire', action.payload.expire);
+      localStorage.setItem('login', action.payload.login);
     },
     logout(state) {
       state.accessToken = null;

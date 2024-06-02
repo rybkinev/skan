@@ -4,12 +4,14 @@ import api from "../API/api";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {setUser} from "../store/userSlice";
+import Loader from "./Loader";
 
 export default () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState('');
   const [passwordError, setPasswordError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -53,15 +55,14 @@ export default () => {
       return;
     }
 
-    try {
-      const response = await api.post(
-        '/account/login',
-        {
-          login: login,
-          password:password
-        }
-      );
-
+    setLoading(true);
+    const response = await api.post(
+      '/account/login',
+      {
+        login: login,
+        password:password
+      }
+    ).then((response) => {
       const { accessToken, expire } = response.data;
 
       console.debug('handleSubmit 1', response.data);
@@ -69,17 +70,19 @@ export default () => {
 
       dispatch(setUser({accessToken: accessToken, expire: expire, login: login}));
       navigate('/');
-    } catch (error) {
-      console.error('Login failed', error);
-      if (error.response?.status === 401) {
-        setPasswordError('Неправильный пароль');
-      }
-      else {
-        console.debug('Auth error not 401');
-        // TODO Желательно показывать какую то другую ошибку
-        setPasswordError('Неправильный пароль');
-      }
-    }
+    })
+      .catch((error) => {
+        console.error('Login failed', error);
+        if (error.response?.status === 401) {
+          setPasswordError('Неправильный пароль');
+        }
+        else {
+          console.debug('Auth error not 401');
+          // TODO Желательно показывать какую то другую ошибку
+          setPasswordError('Неправильный пароль');
+        }
+      });
+
   };
 
   const handlePhoneNumberChange = (e) => {
@@ -161,7 +164,8 @@ export default () => {
             type='submit'
             disabled={!(username && password) }
           >
-            Войти
+            {loading && <Loader/>}
+            {!loading && 'Войти'}
           </button>
         </form>
         <span className='restore-pwd'>Восстановить пароль</span>
