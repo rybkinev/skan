@@ -1,7 +1,6 @@
 import axios from 'axios';
-import store from '../store/store';
-import { updateAccessToken, logout } from '../store/userSlice';
-import {useSelector, useStore} from 'react-redux';
+import {logout} from "../store/userSlice";
+import store from "../store/store";
 
 
 const API_URL = 'https://gateway.scan-interfax.ru/api/v1';
@@ -16,10 +15,11 @@ const api = axios.create({
 api.interceptors.request.use(
   (config) => {
     const state = store.getState();
+    // const accessToken = state.user.accessToken || localStorage.getItem('accessToken');
     const accessToken = state.user.accessToken;
 
-    console.debug('state', state);
-    console.debug('accessToken', accessToken);
+    console.debug('api.interceptors.request', 'state', state);
+    console.debug('api.interceptors.request', 'accessToken', accessToken);
 
     if (accessToken) {
       config.headers.Authorization = `Bearer ${accessToken}`;
@@ -35,27 +35,14 @@ api.interceptors.request.use(
 //   (response) => response,
 //   async (error) => {
 //     const originalRequest = error.config;
-//     const state = store.getState();
+//     // const dispatch = useDispatch();
 //
-//     console.debug('error', error);
-//     console.debug('error.response', error.response);
+//     console.debug('api.interceptors.response', 'error', error);
+//     console.debug('api.interceptors.response', 'error.response', error.response);
 //
-//     if (error.response?.status === 401 && !originalRequest._retry && state.user.refreshToken) {
-//       originalRequest._retry = true;
-//       try {
-//         const response = await axios.post('/api/token/refresh/', {
-//           refresh: state.user.refreshToken,
-//         });
-//         const newAccessToken = response.data.access;
-//         store.dispatch(updateAccessToken(newAccessToken));
-//         originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
-//
-//         axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.access}`;
-//
-//         return api(originalRequest);
-//       } catch (refreshError) {
-//         store.dispatch(logout());
-//       }
+//     if (error.response?.status === 401) {
+//       // Если в ответ на запрос прилетает 401, вызываю logout Поскольку нет refreshToken
+//       // dispatch(logout());
 //     }
 //
 //     return Promise.reject(error);

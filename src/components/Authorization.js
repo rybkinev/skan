@@ -67,15 +67,17 @@ export default () => {
       console.debug('handleSubmit 1', response.data);
       console.debug('accessToken', accessToken);
 
-      dispatch(setUser({accessToken: accessToken, expire: expire}));
+      dispatch(setUser({accessToken: accessToken, expire: expire, login: login}));
       navigate('/');
     } catch (error) {
       console.error('Login failed', error);
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         setPasswordError('Неправильный пароль');
       }
       else {
         console.debug('Auth error not 401');
+        // TODO Желательно показывать какую то другую ошибку
+        setPasswordError('Неправильный пароль');
       }
     }
   };

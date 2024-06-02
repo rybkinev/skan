@@ -2,6 +2,13 @@
 @import "Global";
 
 footer {
+  //display: flex;
+  //flex-direction: row;
+  //justify-content: space-between;
+  //align-items: center;
+  //padding: 0 5vw;
+  //font-size: 14px;
+  //width: 100%;
   @include head-footer;
 
   bottom: 0;

@@ -2,7 +2,18 @@
 @import "Global";
 
 header {
+  //display: grid;
+  //grid-template-areas: 'logo logo nav user-info user';
+  //justify-content: space-between;
+  //align-items: center;
+  //width: 100%;
+
+
   @include head-footer;
+
+  padding: 0 5vw;
+  font-size: 14px;
+
   position: fixed;
   z-index: 999;
   left: 0;
@@ -10,22 +21,23 @@ header {
   height: 93px;
   background-color: $main-color3;
 
-  img {
+  & > img {
     object-fit: cover;
     height: 100%;
   }
 
   nav {
+
     a {
       margin: 0 3vw;
     }
   }
 
-  .auth-container {
+  .un-auth-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: end;
 
     .divider {
       width: 2px;
@@ -39,6 +51,93 @@ header {
       padding: 0.3rem 0.7rem;
       border-radius: 5px;
     }
+  }
+
+  .auth-container {
+    position: relative;
+    display: flex;
+    //justify-content: end;
+    .user {
+      display: flex;
+
+      .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+
+        .user-name {
+          font-size: 0.9rem;
+          opacity: 70%;
+          margin-bottom: 0.2rem;
+        }
+        .logout {
+          font-size: 0.7rem;
+          opacity: 40%;
+          cursor: pointer;
+        }
+      }
+      img {
+        width: 40px;
+        object-fit: cover;
+      }
+    }
+
+    .user-info {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 63px;
+      width: 175px;
+
+      right: 13rem;
+      top: 0;
+      transform: translate(0, -20%);
+      //bottom: 50%;
+      background-color: rgba(red($add-color7), green($add-color7), blue($add-color7), 0.3);
+
+      //padding: 1rem 0.7rem;
+
+      span {
+        font-size: 0.6rem;
+        position: relative;
+        opacity: 40%;
+
+        &:first-child {
+          margin-bottom: .2rem;
+        }
+      }
+
+      .left, .right {
+        display: flex;
+        flex-direction: column;
+
+      }
+      .left {
+        align-items: end;
+        margin-right: 0.5rem;
+
+        span:first-child {
+          margin-bottom: .5rem;
+        }
+      }
+      .right {
+
+        span {
+          opacity: 1;
+          font-size: 0.9rem;
+          font-family: Inter-medium, sans-serif;
+          font-weight: bold;
+
+          &:last-child {
+            color: $add-color8;
+          }
+        }
+      }
+
+    }
+
   }
 
 }
