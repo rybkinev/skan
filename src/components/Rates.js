@@ -5,6 +5,7 @@ import Rate from "./Rate";
 
 const rates = [
   {
+    id: 1,
     name: 'Beginer',
     description: 'Для небольшого исследования',
     img: '/img/rate-beginer.png',
@@ -23,6 +24,7 @@ const rates = [
     ]
   },
   {
+    id: 2,
     name: 'Pro',
     description: 'Для HR и фрилансеров',
     img: '/img/rate-pro.png',
@@ -41,6 +43,7 @@ const rates = [
     ]
   },
   {
+    id: 3,
     name: 'Business',
     description: 'Для корпоративных клиентов',
     img: '/img/rate-business.png',
@@ -63,7 +66,7 @@ export default () => {
   return (
     <div className='rates-container'>
       {rates.map(
-        rate => <Rate rate={rate}/>
+        rate => <Rate rate={rate} key={rate.id}/>
       )}
     </div>
   )

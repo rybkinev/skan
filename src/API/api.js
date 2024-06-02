@@ -18,8 +18,8 @@ api.interceptors.request.use(
     // const accessToken = state.user.accessToken || localStorage.getItem('accessToken');
     const accessToken = state.user.accessToken;
 
-    console.debug('api.interceptors.request', 'state', state);
-    console.debug('api.interceptors.request', 'accessToken', accessToken);
+    // console.debug('api.interceptors.request', 'state', state);
+    // console.debug('api.interceptors.request', 'accessToken', accessToken);
 
     if (accessToken) {
       config.headers.Authorization = `Bearer ${accessToken}`;
@@ -31,23 +31,22 @@ api.interceptors.request.use(
   }
 );
 
-// api.interceptors.response.use(
-//   (response) => response,
-//   async (error) => {
-//     const originalRequest = error.config;
-//     // const dispatch = useDispatch();
-//
-//     console.debug('api.interceptors.response', 'error', error);
-//     console.debug('api.interceptors.response', 'error.response', error.response);
-//
-//     if (error.response?.status === 401) {
-//       // Если в ответ на запрос прилетает 401, вызываю logout Поскольку нет refreshToken
-//       // dispatch(logout());
-//     }
-//
-//     return Promise.reject(error);
-//   }
-// );
+api.interceptors.response.use(
+  (response) => response,
+  async (error) => {
+    const originalRequest = error.config;
+
+    console.debug('api.interceptors.response', 'error', error);
+    console.debug('api.interceptors.response', 'error.response', error.response);
+
+    if (error.response?.status === 401) {
+      // Если в ответ на запрос прилетает 401, вызываю logout Поскольку нет refreshToken
+      store.dispatch(logout());
+    }
+
+    return Promise.reject(error);
+  }
+);
 
 
 export default api;

@@ -35,7 +35,7 @@ export default (props) => {
             В тариф входит:
           </span>
           <ul>
-            {rate.include.map(i => <li>{i}</li>)}
+            {rate.include.map((text, i) => <li key={i}>{text}</li>)}
           </ul>
         </div>
         {

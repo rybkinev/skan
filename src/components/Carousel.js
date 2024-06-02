@@ -90,8 +90,11 @@ export default () => {
       <Slider {...settings}>
         {/*<img src="/img/carusel-arrow.png" alt="Next" className='next-arrow'/>*/}
         {cards.map(card => (
-          <div className='card-container'>
-            <div key={card.id} className="card">
+          <div
+            className='card-container'
+            key={card.id}
+          >
+            <div className="card">
               <img src={card.img} alt=''/>
               <p>{card.content}</p>
             </div>

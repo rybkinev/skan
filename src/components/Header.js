@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import '../static/css/Header.css'
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
@@ -9,19 +9,6 @@ export default () => {
   const userIsAuth = useSelector((state) => state.user.isAuthenticated);
   const login = useSelector((state) => state.user.login);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    // getAccountInfo();
-  }, []);
-
-  const getAccountInfo = async () => {
-    try {
-      const response = api.get('/account/info')
-      console.debug('Header on load', 'account/info', response);
-    } catch (error) {
-      console.error('Header on load', 'account/info', error);
-    }
-  }
 
   return (
     <header>
@@ -52,6 +39,25 @@ const UnAuth = () => {
 
 const Auth = ({ login, dispatch }) => {
 
+  const [limit, setLimit] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    getAccountInfo();
+  }, []);
+
+  const getAccountInfo = async () => {
+      const response = await api.get('/account/info')
+        .then(response => {
+          console.debug('Header on load', 'account/info', response.data);
+          setLimit(response.data.eventFiltersInfo.companyLimit);
+          setCount(response.data.eventFiltersInfo.usedCompanyCount);
+        })
+        .catch ((error) => {
+          console.error('Header on load', 'account/info', error);
+        });
+  }
+
   const handleLogout = () => {
     dispatch(logout());
   }
@@ -76,8 +82,8 @@ const Auth = ({ login, dispatch }) => {
           <span>Лимит по компаниям</span>
         </div>
         <div className='right'>
-          <span>34</span>
-          <span>100</span>
+          <span>{count}</span>
+          <span>{limit}</span>
         </div>
       </div>
     </div>
