@@ -1,16 +1,8 @@
 @import "Var";
 @import "Global";
 
-main {
-  max-width: 1440px;
-  //display: grid;
-  //place-items: center;
-  //flex-direction: column;
-  //justify-content: center;
-}
 
-main {
-  margin: 15vh 5vw 8vh 5vw;
+main.welcome {
 
   .about-container {
     display: flex;
@@ -19,15 +11,9 @@ main {
     padding-bottom: 10vh;
     position: relative;
 
-    //background-image: url('/public/img/main_1.png');
-    //background-size: contain;
-    //background-repeat: no-repeat;
-    //background-position: right;
-
     .left {
       z-index: 1;
       p {
-        font-family: Inter-regular, sans-serif;
         width: 40vw;
         max-width: 700px;
         font-size: 1.25rem;
@@ -58,7 +44,11 @@ main {
   }
 
   .why-us {
+    display: flex;
+    flex-direction: column;
+    position: relative;
     margin-bottom: 1vh;
+    width: 100%;
 
     h2 {
       font-family: ferry, sans-serif;

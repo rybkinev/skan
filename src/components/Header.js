@@ -14,7 +14,7 @@ export default () => {
       <div className='auth-container'>
         <Link to='/'>Зарегистрироваться</Link>
         <div className="divider"></div>
-        <Link to='/' className='button-login'>Войти</Link>
+        <Link to='/login' className='button-login'>Войти</Link>
       </div>
     </header>
   )

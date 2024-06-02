@@ -17,30 +17,29 @@
   font-style: normal;
 }
 .carousel {
+  position: relative;
   width: 100%;
-  margin-left: 1vw;
   margin-right: 0;
 }
-.carousel .container {
+
+.container {
+  position: relative;
   display: flex;
   flex-direction: row;
 }
-.carousel .container .slick-arrow {
-  display: flex !important;
-  height: 39px;
+.container .slick-list {
+  width: 80vw;
+  margin: 0 3rem;
 }
-.carousel .container .slick-arrow:before {
-  content: "";
-}
-.carousel .container .card-container {
+.container .slick-list .card-container {
   padding: 15px 0;
 }
-.carousel .container .card-container img {
+.container .slick-list .card-container img {
   height: 64px;
   margin-top: 10px;
   margin-left: 10px;
 }
-.carousel .container .card-container .card {
+.container .slick-list .card-container .card {
   height: 225px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -50,6 +49,20 @@
   padding: 1vw;
   margin: 0 1vw;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+.container .slick-arrow {
+  height: 39px;
+  width: 39px;
+  cursor: pointer;
+  top: 50%;
+  position: absolute;
+  transform: translate(0, -50%);
+}
+.container .slick-arrow img {
+  width: 100%;
+}
+.container .slick-arrow.slick-next {
+  right: 0;
 }
 
 /*# sourceMappingURL=Carousel.css.map */

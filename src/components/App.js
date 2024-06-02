@@ -1,13 +1,16 @@
 import React from 'react';
 import "../static/css/App.css"
-import {Route, Routes, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
-import Main from "./Main";
+import store from "../store/store";
+import {PrivateRoutes, PublicRoutes} from "./Routes";
 
 
 export default function App() {
-  // const navigate = useNavigate();
+  const state = store.getState();
+  const userIsAuth = state.user.isAuthenticated;
+  const navigate = useNavigate();
 
   // React.useEffect(() => {
   //   navigate('/home');
@@ -16,20 +19,14 @@ export default function App() {
   return (
     <>
       <Header/>
-      <Main/>
-      <Footer/>
 
-      {/*<Routes>*/}
-      {/*  <Route path='/home' >*/}
-      {/*    <Route index element={<Main />} />*/}
-      {/*    <Route path=':id' >*/}
-      {/*      <Route index element={<Category />} />*/}
-      {/*      <Route path=':id' element={<Recipes />} />*/}
-      {/*    </Route>*/}
-      {/*  </Route>*/}
-      {/*  <Route path='/swagger' element={<Swagger />} />*/}
-      {/*  <Route path="*" element={<NotFound />} />*/}
-      {/*</Routes>*/}
+      {userIsAuth ?
+        <PrivateRoutes/>
+      :
+        <PublicRoutes/>
+      }
+
+      <Footer/>
     </>
   )
 }

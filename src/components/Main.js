@@ -3,10 +3,14 @@ import '../static/css/Main.css'
 import {Link} from "react-router-dom";
 import Carousel from "./Carousel";
 import Rates from "./Rates";
+import store from "../store/store";
 
 export default () => {
+  const state = store.getState();
+  const userIsAuth = state.user.isAuthenticated;
+
   return (
-    <main>
+    <main className='welcome'>
       <section className='about-container'>
         <div className='left'>
           <h1>
@@ -18,7 +22,10 @@ export default () => {
           <p>
             Комплексный анализ публикаций, получение данных в формате PDF на электронную почту.
           </p>
-          <Link to='/'>Запросить данные</Link>
+          {userIsAuth
+            ? <Link to='/'>Запросить данные</Link>
+            : <></>
+          }
         </div>
         <img src='/img/main_1.png' alt='Service'/>
       </section>

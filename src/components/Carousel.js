@@ -1,7 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick-theme.css";
 import '../static/css/Carousel.css';
 
 const cards = [
@@ -60,30 +60,33 @@ export default () => {
     slidesToScroll: 1,
     adaptiveHeight: true,
     className: 'container',
+    // arrows: false,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    // responsive: [
-    //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 1,
-    //       infinite: true,
-    //       dots: false
-    //     }
-    //   },
-    //   {
-    //     breakpoint: 600,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1
-    //     }
-    //   }
-    // ]
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      }
+    ]
   };
 
   return (
-    <div className="carousel">
+    // <div className="carousel">
       <Slider {...settings}>
         {/*<img src="/img/carusel-arrow.png" alt="Next" className='next-arrow'/>*/}
         {cards.map(card => (
@@ -95,6 +98,6 @@ export default () => {
           </div>
         ))}
       </Slider>
-    </div>
+    // </div>
   );
 }

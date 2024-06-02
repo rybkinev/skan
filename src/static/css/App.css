@@ -44,9 +44,14 @@ html, body {
   display: grid;
   place-items: center;
 }
+#root main {
+  max-width: 1440px;
+  margin: max(15vh, 100px) 5vw 8vh 5vw;
+}
 
 * {
   box-sizing: border-box;
+  font-family: Inter-regular, sans-serif;
 }
 
 a {
