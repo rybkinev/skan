@@ -2,23 +2,23 @@ import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
-import '../static/css/Carousel.css';
+import '../assets/styles/Carousel.css';
 
 const cards = [
   {
     id: 1,
     content: 'Высокая и оперативная скорость обработки заявки',
-    img: '/img/icon-time.png'
+    img: '/assets/img/icon-time.png'
   },
   {
     id: 2,
     content: 'Огромная комплексная база данных, обеспечивающая объективный ответ на запрос',
-    img: '/img/icon-search.png'
+    img: '/assets/img/icon-search.png'
   },
   {
     id: 3,
     content: 'Защита конфеденциальных сведений, не подлежащих разглашению по федеральному законодательству',
-    img: '/img/icon-lock.png'
+    img: '/assets/img/icon-lock.png'
   },
 ];
 
@@ -31,7 +31,7 @@ function NextArrow(props) {
       style={{...style}}
       onClick={onClick}
     >
-      <img src='/img/carusel-arrow.png' alt='Next' style={{opacity: '20%'}}/>
+      <img src='/assets/img/carusel-arrow.png' alt='Next' style={{opacity: '20%'}}/>
       {/*<i className="arrow right"/>*/}
     </div>
   )
@@ -46,7 +46,7 @@ function PrevArrow(props) {
       style={{...style}}
       onClick={onClick}
     >
-      <img src='/img/carusel-arrow.png' alt='Next' style={{opacity: '20%', rotate: '180deg'}}/>
+      <img src='/assets/img/carusel-arrow.png' alt='Next' style={{opacity: '20%', rotate: '180deg'}}/>
     </div>
   );
 }

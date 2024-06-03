@@ -16,8 +16,12 @@ module.exports = (env) => {
     entry: "./src/index.js",
     devServer: {
       static: [
-        { directory: path.join(__dirname, 'public') },
-        { directory: path.join(__dirname, 'dist') }
+        // { directory: path.join(__dirname, 'public') },
+        // { directory: path.join(__dirname, 'dist') },
+        {
+          directory: path.join(__dirname, 'src', 'assets'),
+          publicPath: '/assets',
+        }
       ],
       hot: true,
       historyApiFallback: true,

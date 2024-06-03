@@ -1,5 +1,5 @@
 import React from "react";
-import '../static/css/Retes.css';
+import '../assets/styles/Retes.css';
 import Rate from "./Rate";
 
 
@@ -8,7 +8,7 @@ const rates = [
     id: 1,
     name: 'Beginer',
     description: 'Для небольшого исследования',
-    img: '/img/rate-beginer.png',
+    img: '/assets/img/rate-beginer.png',
     className: 'beginer',
     url: '/',
     active: true,
@@ -27,7 +27,7 @@ const rates = [
     id: 2,
     name: 'Pro',
     description: 'Для HR и фрилансеров',
-    img: '/img/rate-pro.png',
+    img: '/assets/img/rate-pro.png',
     className: 'pro',
     url: '/',
     active: false,
@@ -46,7 +46,7 @@ const rates = [
     id: 3,
     name: 'Business',
     description: 'Для корпоративных клиентов',
-    img: '/img/rate-business.png',
+    img: '/assets/img/rate-business.png',
     className: 'business',
     url: '/',
     active: false,

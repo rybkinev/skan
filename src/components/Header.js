@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import '../static/css/Header.css'
+import '../assets/styles/Header.css'
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import api from "../API/api";
@@ -13,7 +13,7 @@ export default () => {
 
   return (
     <header>
-      <img src='/img/logo-head 1920x1920.png' alt='Skan logo'/>
+      <img src='/assets/img/logo-head 1920x1920.png' alt='Skan logo'/>
       <nav>
         <Link to='/'>Главная</Link>
         <Link to='/'>Тарифы</Link>
@@ -52,7 +52,7 @@ const Auth = ({ login, dispatch }) => {
     setLoading(true);
       const response = await api.get('/account/info')
         .then(response => {
-          console.debug('Header on load', 'account/info', response.data);
+          // console.debug('Header on load', 'account/info', response.data);
           setLimit(response.data.eventFiltersInfo.companyLimit);
           setCount(response.data.eventFiltersInfo.usedCompanyCount);
           setLoading(false);
@@ -79,7 +79,7 @@ const Auth = ({ login, dispatch }) => {
             Выйти
           </span>
         </div>
-        <img src='/img/avatar.png' alt='avatar'/>
+        <img src='/assets/img/avatar.png' alt='avatar'/>
       </div>
       <div className='user-info'>
         {loading && <Loader/>}

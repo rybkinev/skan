@@ -1,13 +1,13 @@
 import React from "react";
-import '../static/css/Main.css'
+import '../assets/styles/Main.css'
 import {Link} from "react-router-dom";
 import Carousel from "./Carousel";
 import Rates from "./Rates";
 import store from "../store/store";
+import {useSelector} from "react-redux";
 
 export default () => {
-  const state = store.getState();
-  const userIsAuth = state.user.isAuthenticated;
+  const userIsAuth = useSelector((state) => state.user.isAuthenticated);
 
   return (
     <main className='welcome'>
@@ -23,16 +23,16 @@ export default () => {
             Комплексный анализ публикаций, получение данных в формате PDF на электронную почту.
           </p>
           {userIsAuth
-            ? <Link to='/'>Запросить данные</Link>
+            ? <Link to='/search'>Запросить данные</Link>
             : <></>
           }
         </div>
-        <img src='/img/main_1.png' alt='Service'/>
+        <img src='/assets/img/main_1.png' alt='Service'/>
       </section>
       <section className='why-us'>
         <h2>почему именно мы</h2>
         <Carousel/>
-        <img className='img-why-us' src='/img/main-why-us.png' alt=''/>
+        <img className='img-why-us' src='/assets/img/main-why-us.png' alt=''/>
       </section>
 
       <section className='main-rates'>

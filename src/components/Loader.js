@@ -1,12 +1,12 @@
 import React from "react";
-import '../static/css/Loader.css';
+import '../assets/styles/Loader.css';
 
 
 export default () => {
   return (
     <img
       className='loader'
-      src='/img/loader.png'
+      src='/assets/img/loader.png'
       alt='Loading...'
     />
   )

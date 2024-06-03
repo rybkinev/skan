@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+main.search {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+main.search .left {
+  width: 65%;
+}
+main.search .left h1 {
+  font-family: ferry, sans-serif;
+  font-size: 2.5rem;
+  padding-right: 5rem;
+}
+main.search .left > span {
+  font-size: 1.3rem;
+}
+main.search .left .filter-form {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  position: relative;
+  margin-top: 2rem;
+}
+main.search .left .filter-form .filter-form-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+main.search .left .filter-form .filter-form-left > div {
+  display: grid;
+  position: relative;
+  margin-bottom: 1rem;
+}
+main.search .left .filter-form .filter-form-left > div.tonality {
+  position: relative;
+}
+main.search .left .filter-form .filter-form-left > div input, main.search .left .filter-form .filter-form-left > div select {
+  padding: 1em;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  width: 50%;
+  border-radius: 5px;
+  border: 1px solid #C7C7C7;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+}
+main.search .left .filter-form .filter-form-left > div select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 1em 2em 1em 1em;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: url("/src/assets/img/arrow.png") no-repeat right 1em center;
+  background-size: 13px 13px;
+}
+main.search .left .filter-form .filter-form-left > div label {
+  font-size: 1.2rem;
+}
+main.search .left .filter-form .filter-form-left > div label .required {
+  font-size: 1.5rem;
+}
+main.search .left .filter-form .filter-form-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main.search .left .filter-form .filter-form-right .filter-form-right-submit {
+  display: flex;
+  flex-direction: column;
+  padding-left: 7rem;
+}
+main.search .left .filter-form .filter-form-right .filter-form-right-submit button {
+  border: none;
+  border-radius: 5px;
+  background-color: #5970FF;
+  padding: 1rem 0;
+  font-family: Inter-medium, sans-serif;
+  font-size: 1.4rem;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+main.search .left .filter-form .filter-form-right .filter-form-right-submit button:disabled {
+  opacity: 50%;
+  cursor: auto;
+}
+main.search .left .filter-form .filter-form-right .filter-form-right-submit .require-message {
+  text-align: left;
+  color: #949494;
+}
+main.search .right {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+main.search .right .top {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6rem;
+}
+main.search .right .top .img-file {
+  width: 92px;
+}
+main.search .right .top .img-folders {
+  width: 140px;
+  height: 70px;
+}
+main.search .right .img-capture {
+  max-width: 450px;
+  width: 27vw;
+}
+
+/*# sourceMappingURL=Search.css.map */

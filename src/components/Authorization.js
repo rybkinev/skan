@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import '../static/css/Authorization.css'
+import '../assets/styles/Authorization.css'
 import api from "../API/api";
 import {useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
@@ -121,11 +121,11 @@ export default () => {
         <h1>
           Для оформления подписки на тариф, необходимо авторизоваться.
         </h1>
-        <img src='/img/auth-capture.png' alt=''/>
+        <img src='/assets/img/auth-capture.png' alt=''/>
       </div>
       <div className='auth-form'>
 
-        <img className='auth-lock' src='/img/auth-lock.png' alt=''/>
+        <img className='auth-lock' src='/assets/img/auth-lock.png' alt=''/>
 
         <div className='auth-header'>
           <span className='login'>Войти</span>
@@ -173,13 +173,13 @@ export default () => {
           <span>Войти через:</span>
           <div className='oauth-container'>
             <div className='provider google'>
-              <img src='/img/logo-google.png' alt='Google'/>
+              <img src='/assets/img/logo-google.png' alt='Google'/>
             </div>
             <div className='provider facebook'>
-              <img src='/img/logo-facebook.png' alt='Facebook'/>
+              <img src='/assets/img/logo-facebook.png' alt='Facebook'/>
             </div>
             <div className='provider yandex'>
-              <img src='/img/logo-yandex.png' alt='Яндекс'/>
+              <img src='/assets/img/logo-yandex.png' alt='Яндекс'/>
             </div>
           </div>
         </div>

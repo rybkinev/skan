@@ -1,10 +1,10 @@
 import React from "react";
-import '../static/css/Footer.css'
+import '../assets/styles/Footer.css'
 
 export default () => {
   return (
     <footer>
-      <img src='/img/logo-footer 1920x1920.png' alt='Skan logo'/>
+      <img src='/assets/img/logo-footer 1920x1920.png' alt='Skan logo'/>
       <div className='contact-container'>
         <address>
           <p className='contact-item'>

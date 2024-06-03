@@ -1,0 +1,41 @@
+@import "../../../assets/styles/Var";
+@import "../../../assets/styles/Global";
+
+
+div.checkbox-block {
+  font-size: 1.1rem;
+
+  .checkbox-container{
+    margin-bottom: 1rem;
+
+    input[type="checkbox"] {
+      display: none;
+    }
+    .custom-checkbox {
+      height: 20px;
+      width: 20px;
+      border: 1px solid $add-color6;
+      cursor: pointer;
+      display: inline-block;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-right: 10px;
+    }
+
+    input[type="checkbox"]:checked + label .custom-checkbox {
+      background-image: url('/src/assets/img/checkbox.png');
+      border: 1px solid $main-color2;
+    }
+
+    input[type="checkbox"]:checked + label .label-text {
+      color: $add-color6;
+    }
+    .label-text {
+      color: $main-color2;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+  }
+}

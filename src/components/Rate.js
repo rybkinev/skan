@@ -1,5 +1,5 @@
 import React from "react";
-import '../static/css/Rete.css';
+import '../assets/styles/Rete.css';
 import {Link} from "react-router-dom";
 
 export default (props) => {

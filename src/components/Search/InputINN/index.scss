@@ -1,0 +1,7 @@
+@import "../../../assets/styles/Var";
+@import "../../../assets/styles/Global";
+
+div.inn {
+
+  @include input-error;
+}

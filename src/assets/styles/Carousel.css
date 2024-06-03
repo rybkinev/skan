@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+.carousel {
+  position: relative;
+  width: 100%;
+  margin-right: 0;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.container .slick-list {
+  width: 80vw;
+  margin: 0 3rem;
+}
+.container .slick-list .card-container {
+  padding: 15px 0;
+}
+.container .slick-list .card-container img {
+  height: 64px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.container .slick-list .card-container .card {
+  height: 225px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: Inter-regular, sans-serif;
+  font-size: 1rem;
+  text-align: left;
+  padding: 1vw;
+  margin: 0 1vw;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+.container .slick-arrow {
+  height: 39px;
+  width: 39px;
+  cursor: pointer;
+  top: 50%;
+  position: absolute;
+  transform: translate(0, -50%);
+}
+.container .slick-arrow img {
+  width: 100%;
+}
+.container .slick-arrow.slick-next {
+  right: 0;
+}
+
+/*# sourceMappingURL=Carousel.css.map */

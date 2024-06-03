@@ -1,5 +1,5 @@
 import React from 'react';
-import "../static/css/App.css"
+import "../assets/styles/App.css"
 import {useNavigate} from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";

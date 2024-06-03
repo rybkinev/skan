@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+div.date-range-container {
+  position: relative;
+}
+div.date-range-container .input-error {
+  border: 1px solid #FF5959;
+  color: #FF5959;
+}
+div.date-range-container .error-message {
+  color: #FF5959;
+  font-size: 1rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  transform: translate(0, 40%);
+}
+div.date-range-container .error-label {
+  color: #FF5959;
+}
+div.date-range-container .date-range {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+div.date-range-container .date-range input {
+  width: 45%;
+  border-radius: 5px;
+  background: url("/src/assets/img/arrow.png") no-repeat right 1em center;
+  background-size: 13px 13px;
+  cursor: pointer;
+}
+div.date-range-container .date-range input.date-range-start {
+  margin-right: 1.5rem !important;
+}
+
+/*# sourceMappingURL=index.css.map */

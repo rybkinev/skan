@@ -1,0 +1,29 @@
+@import "../../../assets/styles/Var";
+@import "../../../assets/styles/Global";
+
+div.date-range-container {
+  position: relative;
+
+  @include input-error;
+
+  .date-range {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+
+    input {
+      width: 45%;
+      border-radius: 5px;
+      background: url('/src/assets/img/arrow.png') no-repeat right 1em center;
+      background-size: 13px 13px;
+      cursor: pointer;
+
+      &.date-range-start {
+        margin-right: 1.5rem !important;
+      }
+
+    }
+  }
+
+}
