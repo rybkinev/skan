@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import './Search.css';
+import './index.css';
 import CheckboxBlock from "./CheckboxBlock";
 import RangeDate from "./RangeDate";
 import InputINN from "./InputINN";
@@ -10,7 +10,7 @@ const Search = () => {
   const now = new Date();
   const [inn, setInn] = useState('');
   const [tonality, setTonality] = useState('any');
-  const [countDocs, setCountDocs] = useState(null);
+  const [countDocs, setCountDocs] = useState('');
   const [dateEnd, setDateEnd] = useState(now.toISOString().slice(0,10));
   now.setDate(now.getDate() - 1);
   const [dateStart, setDateStart] = useState(now.toISOString().slice(0,10));
@@ -75,7 +75,7 @@ const Search = () => {
         histogramTypes: ["totalDocuments", "riskFactors"]
       };
 
-      console.debug('Отправка запроса на сервер с данными:', searchParams);
+      console.debug('Search handleSubmit', 'Отправка запроса на сервер с данными:', searchParams);
 
       navigate('/result', { state: { searchParams: searchParams } });
     } else {

@@ -1,7 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 import '../assets/styles/Carousel.css';
 
 const cards = [
@@ -86,21 +85,18 @@ export default () => {
   };
 
   return (
-    // <div className="carousel">
-      <Slider {...settings}>
-        {/*<img src="/img/carusel-arrow.png" alt="Next" className='next-arrow'/>*/}
-        {cards.map(card => (
-          <div
-            className='card-container'
-            key={card.id}
-          >
-            <div className="card">
-              <img src={card.img} alt=''/>
-              <p>{card.content}</p>
-            </div>
+    <Slider {...settings}>
+      {cards.map(card => (
+        <div
+          className='card-container'
+          key={card.id}
+        >
+          <div className="card">
+            <img src={card.img} alt=''/>
+            <p>{card.content}</p>
           </div>
-        ))}
-      </Slider>
-    // </div>
+        </div>
+      ))}
+    </Slider>
   );
 }

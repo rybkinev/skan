@@ -1,0 +1,71 @@
+@import "../../../assets/styles/Var";
+@import "../../../assets/styles/Global";
+
+
+.summary-container {
+
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  margin-top: 2rem;
+
+  .slick-list {
+    width: 75vw;
+
+    padding: 0.7rem 1.5rem 0.7rem 0;
+    border: 2px solid $main-color1;
+    border-radius: 0 10px 10px 0;
+
+    .card-container {
+      padding: 0 2rem;
+      border-right: 2px solid $main-color1;
+      font-size: 1.125rem;
+
+      p {
+        margin: 1.325rem 0;
+      }
+    }
+  }
+
+  .slick-arrow {
+
+    .card-headers {
+      //margin-right: 3rem;
+      //margin-left: 2rem;
+      background-color: $main-color1;
+      border-radius: 10px 0 0 10px;
+      border: 2px solid $main-color1;
+      color: $main-color3;
+      padding: 0.7rem 2rem;
+      font-family: Inter-medium, sans-serif;
+      font-size: 1.25rem;
+    }
+
+    img {
+      //width: 100%;
+      height: 39px;
+      width: 39px;
+      cursor: pointer;
+      opacity: 20%;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &.slick-prev {
+      display: flex !important;
+      flex-direction: row;
+      align-items: center;
+    }
+    &.slick-next {
+      display: flex !important;
+      flex-direction: row;
+      align-items: center;
+      //position: absolute;
+      //right: 0;
+      //top: 50%;
+      //transform: translate(0, -50%);
+    }
+  }
+}

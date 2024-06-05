@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+main.search-results {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+main.search-results .top {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main.search-results .top .top-header {
+  position: relative;
+  width: 38%;
+  margin-top: 2rem;
+}
+main.search-results .top .top-header h1 {
+  font-family: ferry, sans-serif;
+  font-size: 2.5rem;
+}
+main.search-results .top .top-header span {
+  font-size: 1.3rem;
+}
+main.search-results .top img.search-result-capture {
+  width: 45%;
+}
+main.search-results .search-data h2 {
+  margin-top: 0;
+  font-family: ferry, sans-serif;
+  font-size: 1.9rem;
+}
+main.search-results .search-data .count-results {
+  color: #949494;
+  font-size: 1.1rem;
+}
+
+/*# sourceMappingURL=index.css.map */

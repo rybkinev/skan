@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+div.checkbox-block {
+  font-size: 1.1rem;
+}
+div.checkbox-block .checkbox-container {
+  margin-bottom: 1rem;
+}
+div.checkbox-block .checkbox-container input[type=checkbox] {
+  display: none;
+}
+div.checkbox-block .checkbox-container .custom-checkbox {
+  height: 20px;
+  width: 20px;
+  border: 1px solid #949494;
+  cursor: pointer;
+  display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+div.checkbox-block .checkbox-container input[type=checkbox]:checked + label .custom-checkbox {
+  background-image: url("/src/assets/img/checkbox.png");
+  border: 1px solid #000000;
+}
+div.checkbox-block .checkbox-container input[type=checkbox]:checked + label .label-text {
+  color: #949494;
+}
+div.checkbox-block .checkbox-container .label-text {
+  color: #000000;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/*# sourceMappingURL=index.css.map */

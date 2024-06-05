@@ -15,11 +15,7 @@ const api = axios.create({
 api.interceptors.request.use(
   (config) => {
     const state = store.getState();
-    // const accessToken = state.user.accessToken || localStorage.getItem('accessToken');
     const accessToken = state.user.accessToken;
-
-    // console.debug('api.interceptors.request', 'state', state);
-    // console.debug('api.interceptors.request', 'accessToken', accessToken);
 
     if (accessToken) {
       config.headers.Authorization = `Bearer ${accessToken}`;
@@ -42,6 +38,7 @@ api.interceptors.response.use(
     if (error.response?.status === 401) {
       // Если в ответ на запрос прилетает 401, вызываю logout Поскольку нет refreshToken
       store.dispatch(logout());
+      window.location.href = '/';
     }
 
     return Promise.reject(error);

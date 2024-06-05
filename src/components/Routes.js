@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 import Main from "./Main";
 import Authorization from "./Authorization";
 import Search from "./Search";
@@ -12,7 +12,7 @@ export function PrivateRoutes() {
       <Route path='/' element={<Main/>}/>
       <Route path='/search' element={<Search/>}/>
       <Route path='/result' element={<SearchResult/>}/>
-      <Route path="*" element={<Main/>}/>
+      <Route path="*" element={<Navigate to="/" />}/>
     </Routes>
   )
 }
