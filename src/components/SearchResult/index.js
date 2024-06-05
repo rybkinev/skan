@@ -4,6 +4,7 @@ import {useLocation, useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
 import api from "../../API/api";
 import Summary from "./Summary";
+import Documents from "./Documents";
 
 
 const SearchResult = () => {
@@ -130,7 +131,8 @@ const SearchResult = () => {
       </div>
 
       <div className='search-documents'>
-
+        <h2>Список документов</h2>
+        <Documents documentsData={documentsData}/>
       </div>
     </main>
   )

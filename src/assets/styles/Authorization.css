@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+main.auth {
+  position: relative;
+  display: flex;
+}
+main.auth .left {
+  width: 55vw;
+  margin-right: 2vw;
+}
+main.auth .left h1 {
+  font-family: ferry, sans-serif;
+  font-size: 2.5rem;
+}
+main.auth .left img {
+  width: 23vw;
+  max-width: 350px;
+  margin-left: 10vw;
+}
+main.auth .auth-form {
+  position: relative;
+  width: 30vw;
+  max-width: 430px;
+  min-width: 250px;
+  margin-top: 5vh;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+}
+main.auth .auth-form .auth-lock {
+  position: absolute;
+  width: 75px;
+  top: 0;
+  left: 0;
+  transform: translate(-60%, -60%);
+}
+main.auth .auth-form .auth-header {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  column-gap: 1rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+main.auth .auth-form .auth-header .login, main.auth .auth-form .auth-header .registration {
+  border-bottom: 2px solid;
+  padding-bottom: 0.4em;
+  cursor: pointer;
+}
+main.auth .auth-form .auth-header .login {
+  border-color: #029491;
+  color: #029491;
+}
+main.auth .auth-form .auth-header .registration {
+  border-color: #C7C7C7;
+  color: #C7C7C7;
+}
+main.auth .auth-form .login-form {
+  display: grid;
+}
+main.auth .auth-form .login-form .wrap-input {
+  display: grid;
+  position: relative;
+}
+main.auth .auth-form .login-form .wrap-input span {
+  color: #949494;
+  font-size: 1rem;
+}
+main.auth .auth-form .login-form .wrap-input input {
+  margin: 1rem 0;
+  padding: 1em;
+  border-radius: 5px;
+  border: 1px solid #C7C7C7;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+}
+main.auth .auth-form .login-form .wrap-input .input-error {
+  border: 1px solid #FF5959;
+  color: #FF5959;
+}
+main.auth .auth-form .login-form .wrap-input .error-message {
+  color: #FF5959;
+  font-size: 1rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  transform: translate(0, 40%);
+}
+main.auth .auth-form .login-form .wrap-input .error-label {
+  color: #FF5959;
+}
+main.auth .auth-form .login-form .login-form-btn {
+  background-color: #5970FF;
+  border-radius: 5px;
+  border: none;
+  color: #FFFFFF;
+  font-family: Inter-medium, sans-serif;
+  font-size: 1.4rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  max-height: 60px;
+}
+main.auth .auth-form .login-form .login-form-btn:disabled {
+  opacity: 50%;
+  cursor: auto;
+}
+main.auth .auth-form .restore-pwd {
+  display: grid;
+  text-align: center;
+  cursor: pointer;
+  color: #5970FF;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+main.auth .auth-form .oauth {
+  margin-top: 2rem;
+}
+main.auth .auth-form .oauth span {
+  color: #949494;
+}
+main.auth .auth-form .oauth .oauth-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 96px));
+  gap: 0.6rem 0.6rem;
+  margin-top: 1rem;
+}
+main.auth .auth-form .oauth .oauth-container .provider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 3px;
+  border: 1px solid rgba(89, 112, 255, 0.51);
+  max-width: 96px;
+  max-height: 31px;
+  padding: 1rem;
+}
+main.auth .auth-form .oauth .oauth-container .provider img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=Authorization.css.map */

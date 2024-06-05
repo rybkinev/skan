@@ -1,0 +1,26 @@
+@import "../../../assets/styles/Var";
+@import "../../../assets/styles/Global";
+
+
+div.documents-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+
+  .documents-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .show-more {
+    @include button;
+
+    margin-top: 4rem;
+    background-color: $add-color3;
+    color: $main-color3;
+    font-size: 1.375rem;
+  }
+}

@@ -35,13 +35,19 @@ main.search-results {
   .search-data {
 
     h2 {
-      margin-top: 0;
-      font-family: ferry, sans-serif;
-      font-size: 1.9rem;
+      @include search-result-title(0);
     }
+
     .count-results {
       color: $add-color6;
       font-size: 1.1rem;
+    }
+  }
+
+  .search-documents {
+
+    h2 {
+      @include search-result-title(5rem);
     }
   }
 

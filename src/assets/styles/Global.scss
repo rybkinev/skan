@@ -40,3 +40,31 @@
   }
 
 }
+
+@mixin search-result-title($margin-top) {
+  margin-top: $margin-top;
+  font-family: ferry, sans-serif;
+  font-size: 1.9rem;
+}
+
+@mixin border-card {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+}
+
+@mixin button {
+  border-radius: 5px;
+  border: none;
+  font-family: Inter-medium, sans-serif;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  height: 59px;
+  min-width: 305px;
+
+  &:disabled {
+    opacity: 50%;
+    cursor: auto;
+  }
+}
