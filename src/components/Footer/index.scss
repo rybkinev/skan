@@ -1,0 +1,47 @@
+@import "../../assets/styles/Var";
+@import "../../assets/styles/Global";
+
+footer {
+  //display: flex;
+  //flex-direction: row;
+  //justify-content: space-between;
+  //align-items: center;
+  //padding: 0 5vw;
+  //font-size: 14px;
+  //width: 100%;
+  @include head-footer;
+
+  bottom: 0;
+  height: 137px;
+
+  color: $main-color3;
+  background-color: $main-color1;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .contact-container {
+
+    address {
+      text-align: end;
+
+      font-style: normal;
+      //font-family: Inter-regular, sans-serif;
+
+      a {
+        color: $main-color3;
+      }
+
+      .contact-item {
+        text-align: right;
+        margin: 0;
+      }
+
+      .copyright {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

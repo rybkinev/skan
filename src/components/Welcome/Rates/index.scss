@@ -1,0 +1,12 @@
+@import "../../../assets/styles/Var";
+@import "../../../assets/styles/Global";
+
+.rates-container {
+  //display: grid;
+  //grid-template-columns: repeat(auto-fill, minmax(450px, 450px));
+  //grid-template-columns: repeat(auto-fill, 1fr);
+  //gap: 35px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3vh;
+}

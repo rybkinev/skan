@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+main.welcome .about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding-bottom: 10vh;
+  position: relative;
+}
+main.welcome .about-container .left {
+  z-index: 1;
+}
+main.welcome .about-container .left p {
+  width: 40vw;
+  max-width: 700px;
+  font-size: 1.25rem;
+  margin-bottom: 8vh;
+}
+main.welcome .about-container .left a {
+  padding: 1rem 3rem;
+  background-color: #5970FF;
+  color: #FFFFFF;
+}
+main.welcome .about-container img {
+  position: absolute;
+  object-fit: contain;
+  height: 100%;
+  z-index: 0;
+  right: 0;
+}
+main.welcome .about-container h1 {
+  font-family: ferry, sans-serif;
+  font-size: 3.5rem;
+}
+main.welcome .why-us {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 1vh;
+  width: 100%;
+}
+main.welcome .why-us h2 {
+  font-family: ferry, sans-serif;
+  font-size: 2.8rem;
+}
+main.welcome .img-why-us {
+  width: 100%;
+  margin: 5vh 0;
+}
+main.welcome .main-rates h2 {
+  font-family: ferry, sans-serif;
+  font-size: 2.8rem;
+}
+
+/*# sourceMappingURL=index.css.map */

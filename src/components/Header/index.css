@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
+  font-size: 14px;
+  padding: 0 5vw;
+  font-size: 14px;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  height: 93px;
+  background-color: #FFFFFF;
+}
+header > img {
+  object-fit: cover;
+  height: 100%;
+}
+header nav a {
+  margin: 0 3vw;
+}
+header .un-auth-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+header .un-auth-container .divider {
+  width: 2px;
+  background-color: #7CE3E1;
+  margin: 0 1.5vw;
+  height: 1.65rem;
+}
+header .un-auth-container .button-login {
+  background-color: #7CE3E1;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+}
+header .auth-container {
+  position: relative;
+  display: flex;
+}
+header .auth-container .user {
+  display: flex;
+}
+header .auth-container .user .login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+header .auth-container .user .login .user-name {
+  font-size: 0.9rem;
+  opacity: 70%;
+  margin-bottom: 0.2rem;
+}
+header .auth-container .user .login .logout {
+  font-size: 0.7rem;
+  opacity: 40%;
+  cursor: pointer;
+}
+header .auth-container .user img {
+  width: 40px;
+  object-fit: cover;
+}
+header .auth-container .user-info {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 63px;
+  width: 175px;
+  right: 13rem;
+  top: 0;
+  transform: translate(0, -20%);
+  background-color: rgba(217, 217, 217, 0.3);
+}
+header .auth-container .user-info span {
+  font-size: 0.6rem;
+  position: relative;
+  opacity: 40%;
+}
+header .auth-container .user-info span:first-child {
+  margin-bottom: 0.2rem;
+}
+header .auth-container .user-info .left, header .auth-container .user-info .right {
+  display: flex;
+  flex-direction: column;
+}
+header .auth-container .user-info .left {
+  align-items: end;
+  margin-right: 0.5rem;
+}
+header .auth-container .user-info .left span:first-child {
+  margin-bottom: 0.5rem;
+}
+header .auth-container .user-info .right span {
+  opacity: 1;
+  font-size: 0.9rem;
+  font-family: Inter-medium, sans-serif;
+  font-weight: bold;
+}
+header .auth-container .user-info .right span:last-child {
+  color: #8AC540;
+}
+
+/*# sourceMappingURL=index.css.map */
