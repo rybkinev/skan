@@ -51,6 +51,11 @@ article.article-card .article-info {
   color: #949494;
   font-size: 1.125rem;
 }
+@media (max-width: 810px) {
+  article.article-card .article-info {
+    font-size: 1.4rem;
+  }
+}
 article.article-card .article-info .article-date {
   margin-right: 2rem;
 }
@@ -66,6 +71,11 @@ article.article-card .article-title {
   font-family: Inter-medium, sans-serif;
   font-size: 1.625rem;
 }
+@media (max-width: 810px) {
+  article.article-card .article-title {
+    font-size: 1.9rem;
+  }
+}
 article.article-card .tag {
   background-color: #FFB64F;
   border-radius: 5px;
@@ -75,6 +85,11 @@ article.article-card .tag {
   font-size: 0.75rem;
   display: grid;
   place-items: center;
+}
+@media (max-width: 810px) {
+  article.article-card .tag {
+    font-size: 1rem;
+  }
 }
 article.article-card img {
   width: 100%;
@@ -87,6 +102,11 @@ article.article-card .article-content {
   opacity: 0.5;
   font-size: 1rem;
   margin-bottom: 2rem;
+}
+@media (max-width: 810px) {
+  article.article-card .article-content {
+    font-size: 1.2rem;
+  }
 }
 article.article-card .article-footer {
   margin-top: auto;
@@ -103,17 +123,25 @@ article.article-card .article-footer .read-more {
   cursor: pointer;
   height: 59px;
   min-width: 305px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #7CE3E1;
   color: #000000;
   font-size: 1rem;
   font-family: Inter-regular, sans-serif;
-  padding-right: 2rem;
-  padding-left: 2rem;
   margin: 0;
 }
 article.article-card .article-footer .read-more:disabled {
   opacity: 50%;
   cursor: auto;
+}
+@media (max-width: 810px) {
+  article.article-card .article-footer .read-more {
+    font-size: 1.4rem;
+    height: 41px;
+    width: 195px;
+  }
 }
 article.article-card .article-footer .read-more.iactive {
   opacity: 0.5;
@@ -122,6 +150,11 @@ article.article-card .article-footer .read-more.iactive {
 article.article-card .article-footer .word-count {
   color: #949494;
   font-size: 1rem;
+}
+@media (max-width: 810px) {
+  article.article-card .article-footer .word-count {
+    font-size: 1.4rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

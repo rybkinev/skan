@@ -49,6 +49,11 @@ div.documents-container .documents-cards {
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
 }
+@media (max-width: 810px) {
+  div.documents-container .documents-cards {
+    grid-template-columns: 1fr;
+  }
+}
 div.documents-container .show-more {
   border-radius: 5px;
   border: none;
@@ -58,6 +63,9 @@ div.documents-container .show-more {
   cursor: pointer;
   height: 59px;
   min-width: 305px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 4rem;
   background-color: #5970FF;
   color: #FFFFFF;

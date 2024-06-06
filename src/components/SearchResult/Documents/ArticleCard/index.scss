@@ -12,6 +12,9 @@ article.article-card {
     display: flex;
     color: $add-color6;
     font-size: 1.125rem;
+    @media (screen and max-width: $mobile-max-width) {
+      font-size: 1.4rem;
+    }
 
     .article-date {
       margin-right: 2rem;
@@ -31,6 +34,9 @@ article.article-card {
   .article-title {
     font-family: Inter-medium, sans-serif;
     font-size: 1.625rem;
+    @media (screen and max-width: $mobile-max-width) {
+      font-size: 1.9rem;
+    }
   }
   .tag {
     background-color: $add-color1;
@@ -44,6 +50,9 @@ article.article-card {
 
     display: grid;
     place-items: center;
+    @media (screen and max-width: $mobile-max-width) {
+      font-size: 1rem;
+    }
 
   }
 
@@ -61,6 +70,9 @@ article.article-card {
     opacity: .5;
     font-size: 1rem;
     margin-bottom: 2rem;
+    @media (screen and max-width: $mobile-max-width) {
+      font-size: 1.2rem;
+    }
   }
 
   .article-footer {
@@ -76,9 +88,14 @@ article.article-card {
       color: $main-color2;
       font-size: 1rem;
       font-family: Inter-regular, sans-serif;
-      padding-right: 2rem;
-      padding-left: 2rem;
+      //padding-right: 2rem;
+      //padding-left: 2rem;
       margin: 0;
+      @media (screen and max-width: $mobile-max-width) {
+        font-size: 1.4rem;
+        height: 41px;
+        width: 195px;
+      }
 
       &.iactive {
         opacity: .5;
@@ -88,6 +105,9 @@ article.article-card {
     .word-count {
       color: $add-color6;
       font-size: 1rem;
+      @media (screen and max-width: $mobile-max-width) {
+        font-size: 1.4rem;
+      }
     }
   }
 

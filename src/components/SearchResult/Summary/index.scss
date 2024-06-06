@@ -9,17 +9,81 @@
   flex-direction: row;
   margin-top: 2rem;
 
-  .slick-list {
-    width: 75vw;
+  width: 100%;
+  @media (screen and max-width: $mobile-max-width) {
+    flex-direction: column;
+  }
 
+  .card-headers {
+    //margin-right: 3rem;
+    //margin-left: 2rem;
+    background-color: $main-color1;
+    border-radius: 10px 0 0 10px;
+    border: 2px solid $main-color1;
+    color: $main-color3;
+    padding: 0.7rem 2rem;
+    font-family: Inter-medium, sans-serif;
+    font-size: 1.25rem;
+
+    @media (screen and max-width: $mobile-max-width) {
+      display: flex;
+      border-radius: 10px 10px 0 0;
+      justify-content: space-between;
+      width: 75vw;
+      margin-left: 39px;
+
+      p {
+        margin: 2rem 0;
+        font-size: 1.8rem;
+
+        &:first-child {
+          padding-right: 1em;
+        }
+      }
+    }
+  }
+
+  @media (screen and max-width: $mobile-max-width) {
+    .slick-slider {
+      flex-direction: row;
+      margin: 0;
+    }
+  }
+
+  .slick-list {
+    max-width: 1230px;
+    @media (screen and max-width: 1600px) {
+      width: 75vw;
+    }
     padding: 0.7rem 1.5rem 0.7rem 0;
     border: 2px solid $main-color1;
     border-radius: 0 10px 10px 0;
+
+    @media (screen and max-width: $mobile-max-width) {
+      border-radius: 0 0 10px 10px;
+    }
 
     .card-container {
       padding: 0 2rem;
       border-right: 2px solid $main-color1;
       font-size: 1.125rem;
+
+      @media (screen and max-width: $mobile-max-width) {
+        .card {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          p {
+            margin: 2rem 0;
+            font-size: 1.6rem;
+
+            &:first-child {
+              margin-right: -1.5em;
+            }
+          }
+        }
+      }
 
       p {
         margin: 1.325rem 0;
@@ -28,18 +92,6 @@
   }
 
   .slick-arrow {
-
-    .card-headers {
-      //margin-right: 3rem;
-      //margin-left: 2rem;
-      background-color: $main-color1;
-      border-radius: 10px 0 0 10px;
-      border: 2px solid $main-color1;
-      color: $main-color3;
-      padding: 0.7rem 2rem;
-      font-family: Inter-medium, sans-serif;
-      font-size: 1.25rem;
-    }
 
     img {
       //width: 100%;

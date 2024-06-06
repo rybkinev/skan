@@ -12,23 +12,39 @@ main.search-results {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @media (screen and max-width: $mobile-max-width) {
+      flex-direction: column;
+    }
 
     .top-header{
       position: relative;
       width: 38%;
       margin-top: 2rem;
+      @media (screen and max-width: $mobile-max-width) {
+        width: 100%;
+      }
 
       h1 {
         font-family: ferry, sans-serif;
         font-size: 2.5rem;
+        @media (screen and max-width: $mobile-max-width) {
+          font-size: 2.8rem;
+        }
       }
       span {
         font-size: 1.3rem;
+        @media (screen and max-width: $mobile-max-width) {
+          font-size: 1.8rem;
+          width: 100%;
+        }
       }
     }
     img.search-result-capture {
       width: 45%;
       //height: 370px;
+      @media (screen and max-width: $mobile-max-width) {
+        width: 100%;
+      }
     }
   }
 
@@ -41,6 +57,9 @@ main.search-results {
     .count-results {
       color: $add-color6;
       font-size: 1.1rem;
+      @media (screen and max-width: $mobile-max-width) {
+        font-size: 1.8rem;
+      }
     }
   }
 

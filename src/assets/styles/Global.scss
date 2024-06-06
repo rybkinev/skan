@@ -45,6 +45,9 @@
   margin-top: $margin-top;
   font-family: ferry, sans-serif;
   font-size: 1.9rem;
+  @media (screen and max-width: $mobile-max-width) {
+    font-size: 2.8rem;
+  }
 }
 
 @mixin border-card {
@@ -62,6 +65,10 @@
   cursor: pointer;
   height: 59px;
   min-width: 305px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:disabled {
     opacity: 50%;

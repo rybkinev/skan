@@ -57,7 +57,7 @@ function NextArrow(props) {
 }
 
 function PrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, style, onClick, isMobile } = props;
   return (
     <div
       className={className}
@@ -70,17 +70,31 @@ function PrevArrow(props) {
         alt='Next'
         style={{rotate: '180deg'}}
       />
-      <div className="card-headers">
-        <p className="header-period">Период</p>
-        <p className="header-total">Всего</p>
-        <p className="header-risks">Риски</p>
-      </div>
+      {!isMobile &&
+        <div className="card-headers">
+          <p className="header-period">Период</p>
+          <p className="header-total">Всего</p>
+          <p className="header-risks">Риски</p>
+        </div>
+      }
     </div>
   );
 }
 
 const Summary = ({searchData, isLoading, isError}) => {
   const [combinedData, setCombinedData] = useState([]);
+
+  const maxWidth = 810;
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= maxWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= maxWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   //  useEffect(() => {
   //     if (tableWrapperRef.current) {
@@ -110,7 +124,7 @@ const Summary = ({searchData, isLoading, isError}) => {
     slideWidth: '100px',
     // arrows: false,
     nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    prevArrow: <PrevArrow isMobile={isMobile}/>,
     responsive: [
       {
         breakpoint: 1366,
@@ -143,7 +157,14 @@ const Summary = ({searchData, isLoading, isError}) => {
   };
 
   return (
-    // <div className='summary-container'>
+    <div className='summary-container'>
+      {isMobile &&
+        <div className="card-headers">
+          <p className="header-period">Период</p>
+          <p className="header-total">Всего</p>
+          <p className="header-risks">Риски</p>
+        </div>
+      }
       <Slider {...settings}>
         {isLoading && <Loader/>}
         {!isLoading && combinedData.map((card, index) => (
@@ -159,7 +180,7 @@ const Summary = ({searchData, isLoading, isError}) => {
           </div>
         ))}
       </Slider>
-    // </div>
+    </div>
   )
 }
 
