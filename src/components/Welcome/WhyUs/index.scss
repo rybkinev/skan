@@ -45,6 +45,11 @@
         padding: 1vw;
         margin: 0 1vw;
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+
+        @media (screen and max-width: $mobile-max-width) {
+          height: 188px;
+          font-size: 1.8rem;
+        }
       }
     }
   }

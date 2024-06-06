@@ -31,10 +31,12 @@ const Welcome = () => {
       <section className='why-us'>
         <h2>почему именно мы</h2>
         <WhyUs/>
-        <img className='img-why-us' src='/assets/img/main-why-us.png' alt=''/>
+        <div className='img-container'>
+          <img className='img-why-us' src='/assets/img/main-why-us.png' alt=''/>
+        </div>
       </section>
 
-      <section className='main-index'>
+      <section className='main-rates'>
         <h2>наши тарифы</h2>
         <Rates/>
       </section>

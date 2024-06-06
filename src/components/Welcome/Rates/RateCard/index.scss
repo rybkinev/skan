@@ -3,7 +3,7 @@
 
 .rate-container {
   height: 540px;
-  //max-width: 450px;
+  max-width: 420px;
   margin: auto 1vw;
 
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
@@ -12,11 +12,19 @@
   display: grid;
   grid-template-rows: 1fr 3fr;
 
-  &:first-child {
-    margin-left: 0;
+  @media (screen and max-width: $mobile-max-width) {
+    width: 100%;
+    margin: 3vh 2vw;
+    height: 511px;
   }
-  &:last-child {
-    margin-right: 0;
+
+  @media (screen and min-width: ($mobile-max-width + 1)) {
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &.active.beginer {
@@ -50,10 +58,16 @@
     .rate-name {
       font-family: Inter, sans-serif;
       font-size: 2rem;
+      @media (screen and max-width: $mobile-max-width) {
+        font-size: 3rem;
+      }
     }
     .rate-description {
       //font-family: Inter-regular, sans-serif;
       font-size: 1.1rem;
+      @media (screen and max-width: $mobile-max-width) {
+        font-size: 1.8rem;
+      }
     }
     img {
       height: 83px;
@@ -65,21 +79,32 @@
   .rate-main {
     padding: 2.5rem 1.5rem 1.5rem 1.5rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     .rate-price {
       .price {
         margin-right: 1.5rem;
         font-size: 1.9rem;
+        @media (screen and max-width: $mobile-max-width) {
+          font-size: 3rem;
+        }
       }
       .price-before {
         text-decoration: line-through;
         opacity: 50%;
         font-size: 1.5rem;
+        @media (screen and max-width: $mobile-max-width) {
+          font-size: 2.5rem;
+        }
       }
     }
     .rate-price-description {
       //font-family: Inter-regular, sans-serif;
       font-size: 1.1rem;
+      @media (screen and max-width: $mobile-max-width) {
+        font-size: 1.8rem;
+      }
     }
 
     .rate-include {
@@ -88,6 +113,9 @@
       span {
         font-family: Inter, sans-serif;
         font-size: 1.4rem;
+        @media (screen and max-width: $mobile-max-width) {
+          font-size: 1.8rem;
+        }
       }
       ul {
         position: relative;
@@ -103,13 +131,19 @@
           background-repeat: no-repeat;
 
           margin: 0.5rem 0;
+          @media (screen and max-width: $mobile-max-width) {
+            font-size: 1.8rem;
+            background-size: 1.9rem 1.9rem;
+            padding-left: 2.2rem;
+          }
         }
       }
     }
 
     a {
-      position: absolute;
-      width: calc(100% - 3rem);
+      //position: absolute;
+      margin-top: auto;
+      //width: calc(100% - 3rem);
       bottom: 1.5rem;
       text-align: center;
       padding: 1rem 0;
@@ -118,6 +152,10 @@
       border-radius: 5px;
       //font-family: Inter-regular, sans-serif;
       font-size: 1.2rem;
+      @media (screen and max-width: $mobile-max-width) {
+        font-size: 1.8rem;
+        padding: 2rem 0;
+      }
 
       &.active {
         background-color: #D2D2D2;
@@ -126,6 +164,9 @@
     }
 
     & .stick-active {
+      @media (screen and max-width: $mobile-max-width) {
+        display: none;
+      }
       position: absolute;
       top: 0;
       right: 0;

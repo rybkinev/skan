@@ -45,8 +45,25 @@ main.welcome .about-container {
   padding-bottom: 10vh;
   position: relative;
 }
+@media (max-width: 810px) {
+  main.welcome .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 main.welcome .about-container .left {
   z-index: 1;
+  position: relative;
+}
+@media (max-width: 810px) {
+  main.welcome .about-container .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main.welcome .about-container .left h1 {
+    font-size: 2.8rem;
+  }
 }
 main.welcome .about-container .left p {
   width: 40vw;
@@ -54,10 +71,27 @@ main.welcome .about-container .left p {
   font-size: 1.25rem;
   margin-bottom: 8vh;
 }
+@media (max-width: 810px) {
+  main.welcome .about-container .left p {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+}
 main.welcome .about-container .left a {
   padding: 1rem 3rem;
   background-color: #5970FF;
   color: #FFFFFF;
+}
+@media (max-width: 810px) {
+  main.welcome .about-container .left a {
+    margin: 0 5rem;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 2rem;
+  }
 }
 main.welcome .about-container img {
   position: absolute;
@@ -65,6 +99,14 @@ main.welcome .about-container img {
   height: 100%;
   z-index: 0;
   right: 0;
+}
+@media (max-width: 810px) {
+  main.welcome .about-container img {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 5rem;
+  }
 }
 main.welcome .about-container h1 {
   font-family: ferry, sans-serif;
@@ -81,9 +123,20 @@ main.welcome .why-us h2 {
   font-family: ferry, sans-serif;
   font-size: 2.8rem;
 }
-main.welcome .img-why-us {
+main.welcome .img-container {
+  position: relative;
   width: 100%;
   margin: 5vh 0;
+  overflow: hidden;
+}
+main.welcome .img-container .img-why-us {
+  width: 100%;
+}
+@media (max-width: 810px) {
+  main.welcome .img-container .img-why-us {
+    clip-path: inset(0 50% 0 0);
+    width: 230%;
+  }
 }
 main.welcome .main-rates h2 {
   font-family: ferry, sans-serif;

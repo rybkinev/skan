@@ -11,19 +11,48 @@ main.welcome {
     padding-bottom: 10vh;
     position: relative;
 
+    @media (screen and max-width: $mobile-max-width) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .left {
       z-index: 1;
+      position: relative;
+
+      @media (screen and max-width: $mobile-max-width) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        //align-items: center;
+        h1 {
+          font-size: 2.8rem;
+        }
+      }
       p {
         width: 40vw;
         max-width: 700px;
         font-size: 1.25rem;
         margin-bottom: 8vh;
+        @media (screen and max-width: $mobile-max-width) {
+          font-size: 1.8rem;
+          width: 100%;
+        }
       }
 
       a{
         padding: 1rem 3rem;
         background-color: $add-color3;
         color: $main-color3;
+        @media (screen and max-width: $mobile-max-width) {
+          margin: 0 5rem;
+          padding: 2rem 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 5px;
+          font-size: 2rem;
+        }
       }
     }
 
@@ -34,6 +63,12 @@ main.welcome {
       height: 100%;
       z-index: 0;
       right: 0;
+      @media (screen and max-width: $mobile-max-width) {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        margin-top: 5rem;
+      }
     }
 
     h1 {
@@ -56,9 +91,20 @@ main.welcome {
     }
   }
 
-  .img-why-us {
+  .img-container {
+    position: relative;
     width: 100%;
     margin: 5vh 0;
+    overflow: hidden;
+
+    .img-why-us {
+      width: 100%;
+
+      @media (screen and max-width: $mobile-max-width) {
+        clip-path: inset(0 50% 0 0);
+        width: 230%;
+      }
+    }
   }
 
   .main-rates{
