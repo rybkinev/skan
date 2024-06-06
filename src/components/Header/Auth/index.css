@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+.auth-container {
+  position: relative;
+  display: flex;
+}
+.auth-container .user {
+  display: flex;
+  align-items: center;
+}
+.auth-container .user .login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+.auth-container .user .login .user-name {
+  font-size: 0.9rem;
+  opacity: 70%;
+  margin-bottom: 0.2rem;
+}
+.auth-container .user .login .logout {
+  font-size: 0.7rem;
+  opacity: 40%;
+  cursor: pointer;
+}
+.auth-container .user img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-left: 0.7vw;
+}
+.auth-container .user-info {
+  position: relative;
+  margin-right: 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 63px;
+  width: 175px;
+  background-color: rgba(217, 217, 217, 0.3);
+}
+.auth-container .user-info span {
+  font-size: 0.6rem;
+  position: relative;
+  opacity: 40%;
+}
+.auth-container .user-info span:first-child {
+  margin-bottom: 0.2rem;
+}
+.auth-container .user-info .left, .auth-container .user-info .right {
+  display: flex;
+  flex-direction: column;
+}
+.auth-container .user-info .left {
+  align-items: end;
+  margin-right: 0.5rem;
+}
+.auth-container .user-info .left span:first-child {
+  margin-bottom: 0.5rem;
+}
+.auth-container .user-info .right span {
+  opacity: 1;
+  font-size: 0.9rem;
+  font-family: Inter-medium, sans-serif;
+  font-weight: bold;
+}
+.auth-container .user-info .right span:last-child {
+  color: #8AC540;
+}
+
+/*# sourceMappingURL=index.css.map */

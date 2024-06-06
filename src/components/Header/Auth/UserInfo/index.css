@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+.display-none {
+  display: none;
+}
+
+.user-info {
+  position: relative;
+  margin-right: 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 63px;
+  width: 175px;
+  background-color: rgba(217, 217, 217, 0.3);
+}
+.user-info span {
+  font-size: 0.6rem;
+  position: relative;
+  opacity: 40%;
+}
+.user-info span:first-child {
+  margin-bottom: 0.2rem;
+}
+.user-info .left, .user-info .right {
+  display: flex;
+  flex-direction: column;
+}
+.user-info .left {
+  align-items: end;
+  margin-right: 0.5rem;
+}
+.user-info .left span:first-child {
+  margin-bottom: 0.5rem;
+}
+.user-info .right span {
+  opacity: 1;
+  font-size: 0.9rem;
+  font-family: Inter-medium, sans-serif;
+  font-weight: bold;
+}
+.user-info .right span:last-child {
+  color: #8AC540;
+}
+
+/*# sourceMappingURL=index.css.map */

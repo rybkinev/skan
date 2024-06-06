@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+.display-none {
+  display: none;
+}
+
+div.main-menu {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 1000px;
+  background-color: #029491;
+  padding: 0 3rem 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+div.main-menu .menu-header {
+  height: 93px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+div.main-menu .menu-header img.brand-logo {
+  object-fit: cover;
+  height: 100%;
+}
+div.main-menu .menu-header .menu-close {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.css.map */
