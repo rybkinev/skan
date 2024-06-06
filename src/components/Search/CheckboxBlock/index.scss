@@ -4,6 +4,9 @@
 
 div.checkbox-block {
   font-size: 1.1rem;
+  @media (screen and max-width: $mobile-max-width) {
+    display: none;
+  }
 
   .checkbox-container{
     margin-bottom: 1rem;

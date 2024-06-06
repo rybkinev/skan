@@ -11,6 +11,10 @@ div.date-range-container {
     display: flex;
     flex-direction: row;
 
+    @media (screen and max-width: $mobile-max-width) {
+      flex-direction: column;
+    }
+
 
     input {
       width: 45%;

@@ -40,42 +40,70 @@
 
 main.search {
   position: relative;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-areas: "name folders" "form capture";
 }
-main.search .left {
-  width: 65%;
+@media (max-width: 810px) {
+  main.search {
+    grid-template-areas: "name" "folders" "form" "capture";
+  }
 }
-main.search .left h1 {
+main.search .header-name {
+  grid-area: name;
+}
+main.search .header-name h1 {
   font-family: ferry, sans-serif;
   font-size: 2.5rem;
   padding-right: 5rem;
 }
-main.search .left > span {
+@media (max-width: 810px) {
+  main.search .header-name h1 {
+    font-size: 2.8rem;
+  }
+}
+main.search .header-name > span {
   font-size: 1.3rem;
 }
-main.search .left .filter-form {
+@media (max-width: 810px) {
+  main.search .header-name > span {
+    font-size: 1.8rem;
+  }
+}
+main.search .filter-form {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 2rem;
   display: flex;
   position: relative;
   margin-top: 2rem;
+  grid-area: form;
 }
-main.search .left .filter-form .filter-form-left {
+@media (max-width: 810px) {
+  main.search .filter-form {
+    margin-top: 2rem;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+main.search .filter-form .filter-form-left {
   display: flex;
   flex-direction: column;
   width: 50%;
 }
-main.search .left .filter-form .filter-form-left > div {
+@media (max-width: 810px) {
+  main.search .filter-form .filter-form-left {
+    width: 100%;
+  }
+}
+main.search .filter-form .filter-form-left > div {
   display: grid;
   position: relative;
   margin-bottom: 1rem;
 }
-main.search .left .filter-form .filter-form-left > div.tonality {
+main.search .filter-form .filter-form-left > div.tonality {
   position: relative;
 }
-main.search .left .filter-form .filter-form-left > div input, main.search .left .filter-form .filter-form-left > div select {
+main.search .filter-form .filter-form-left > div input, main.search .filter-form .filter-form-left > div select {
   padding: 1em;
   margin: 1rem 0;
   font-size: 0.9rem;
@@ -84,7 +112,13 @@ main.search .left .filter-form .filter-form-left > div input, main.search .left 
   border: 1px solid #C7C7C7;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
 }
-main.search .left .filter-form .filter-form-left > div select {
+@media (max-width: 810px) {
+  main.search .filter-form .filter-form-left > div input, main.search .filter-form .filter-form-left > div select {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+}
+main.search .filter-form .filter-form-left > div select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -95,23 +129,43 @@ main.search .left .filter-form .filter-form-left > div select {
   background: url("/src/assets/img/arrow.png") no-repeat right 1em center;
   background-size: 13px 13px;
 }
-main.search .left .filter-form .filter-form-left > div label {
+@media (max-width: 810px) {
+  main.search .filter-form .filter-form-left > div select {
+    font-size: 1.4rem;
+  }
+}
+main.search .filter-form .filter-form-left > div label {
   font-size: 1.2rem;
 }
-main.search .left .filter-form .filter-form-left > div label .required {
+@media (max-width: 810px) {
+  main.search .filter-form .filter-form-left > div label {
+    font-size: 1.8rem;
+  }
+}
+main.search .filter-form .filter-form-left > div label .required {
   font-size: 1.5rem;
 }
-main.search .left .filter-form .filter-form-right {
+@media (max-width: 810px) {
+  main.search .filter-form .filter-form-left > div label .required {
+    font-size: 2.1rem;
+  }
+}
+main.search .filter-form .filter-form-right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-main.search .left .filter-form .filter-form-right .filter-form-right-submit {
+main.search .filter-form .filter-form-right .filter-form-right-submit {
   display: flex;
   flex-direction: column;
   padding-left: 7rem;
 }
-main.search .left .filter-form .filter-form-right .filter-form-right-submit button {
+@media (max-width: 810px) {
+  main.search .filter-form .filter-form-right .filter-form-right-submit {
+    padding: 0;
+  }
+}
+main.search .filter-form .filter-form-right .filter-form-right-submit button {
   border: none;
   border-radius: 5px;
   background-color: #5970FF;
@@ -122,39 +176,65 @@ main.search .left .filter-form .filter-form-right .filter-form-right-submit butt
   margin-bottom: 1rem;
   cursor: pointer;
 }
-main.search .left .filter-form .filter-form-right .filter-form-right-submit button:disabled {
+@media (max-width: 810px) {
+  main.search .filter-form .filter-form-right .filter-form-right-submit button {
+    font-size: 2rem;
+  }
+}
+main.search .filter-form .filter-form-right .filter-form-right-submit button:disabled {
   opacity: 50%;
   cursor: auto;
 }
-main.search .left .filter-form .filter-form-right .filter-form-right-submit .require-message {
+main.search .filter-form .filter-form-right .filter-form-right-submit .require-message {
   text-align: left;
   color: #949494;
 }
-main.search .right {
-  width: 35%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: end;
-}
-main.search .right .top {
+main.search .top {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   margin-top: 6rem;
+  grid-area: folders;
 }
-main.search .right .top .img-file {
+@media (max-width: 810px) {
+  main.search .top {
+    margin: 0;
+  }
+}
+main.search .top .img-file {
   width: 92px;
 }
-main.search .right .top .img-folders {
+@media (max-width: 810px) {
+  main.search .top .img-file {
+    position: absolute;
+    right: 0;
+    top: 9rem;
+  }
+}
+main.search .top .img-folders {
   width: 140px;
   height: 70px;
 }
-main.search .right .img-capture {
+@media (max-width: 810px) {
+  main.search .top .img-folders {
+    display: none;
+  }
+}
+main.search .img-capture {
   max-width: 450px;
   width: 27vw;
+  grid-area: capture;
+  margin-left: 5rem;
+  margin-top: auto;
+}
+@media (max-width: 810px) {
+  main.search .img-capture {
+    width: 100%;
+    margin: 5rem 0 0;
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

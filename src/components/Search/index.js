@@ -85,14 +85,16 @@ const Search = () => {
 
   return (
     <main className='search'>
-      <div className='left'>
-        <h1>
-          Найдите необходимые данные в пару кликов.
-        </h1>
-        <span>
-          Задайте параметры поиска.
-          <br/> Чем больше заполните, тем точнее поиск
-        </span>
+      {/*<div className='left'>*/}
+        <div className='header-name'>
+          <h1>
+            Найдите необходимые данные в пару кликов.
+          </h1>
+          <span>
+            Задайте параметры поиска.
+            <br/> Чем больше заполните, тем точнее поиск
+          </span>
+        </div>
         <form className='filter-form' onSubmit={handleSubmit}>
           <div className='filter-form-left'>
             <InputINN
@@ -130,8 +132,8 @@ const Search = () => {
             </div>
           </div>
         </form>
-      </div>
-      <div className='right'>
+      {/*</div>*/}
+      {/*<div className='right'>*/}
         <div className='top'>
           <img
             className='img-file'
@@ -149,7 +151,7 @@ const Search = () => {
           src='/assets/img/search-capture.png'
           alt=''
         />
-      </div>
+      {/*</div>*/}
     </main>
   )
 }

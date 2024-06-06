@@ -62,6 +62,11 @@ div.date-range-container .date-range {
   display: flex;
   flex-direction: row;
 }
+@media (max-width: 810px) {
+  div.date-range-container .date-range {
+    flex-direction: column;
+  }
+}
 div.date-range-container .date-range input {
   width: 45%;
   border-radius: 5px;

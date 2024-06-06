@@ -41,6 +41,11 @@
 div.checkbox-block {
   font-size: 1.1rem;
 }
+@media (max-width: 810px) {
+  div.checkbox-block {
+    display: none;
+  }
+}
 div.checkbox-block .checkbox-container {
   margin-bottom: 1rem;
 }
