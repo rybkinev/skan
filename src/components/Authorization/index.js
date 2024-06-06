@@ -117,12 +117,12 @@ export default () => {
 
   return (
     <main className='auth'>
-      <div className='left'>
+      {/*<div className='left'>*/}
         <h1>
           Для оформления подписки на тариф, необходимо авторизоваться.
         </h1>
         <img src='/assets/img/auth-capture.png' alt=''/>
-      </div>
+      {/*</div>*/}
       <div className='auth-form'>
 
         <img className='auth-lock' src='/assets/img/auth-lock.png' alt=''/>

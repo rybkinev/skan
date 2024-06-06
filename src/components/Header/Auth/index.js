@@ -7,7 +7,7 @@ import UserInfo from "./UserInfo";
 const Auth = ({ login, dispatch, callback, isMobile }) => {
 
   const handleLogout = () => {
-    callback();
+    if (callback) callback();
     dispatch(logout());
   }
 

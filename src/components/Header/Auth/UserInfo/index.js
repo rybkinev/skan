@@ -2,15 +2,19 @@ import React, {useEffect, useState} from "react";
 import './index.css';
 import Loader from "../../../Loader";
 import api from "../../../../API/api";
+import {useSelector} from "react-redux";
 
 
 const UserInfo = ({isMobile}) => {
+  const userIsAuth = useSelector((state) => state.user.isAuthenticated);
   const [limit, setLimit] = useState(0);
   const [count, setCount] = useState(0);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    getAccountInfo().then(r => console.debug(r));
+    if (userIsAuth) {
+      getAccountInfo().then(r => console.debug(r));
+    }
   }, []);
 
   const getAccountInfo = async () => {
@@ -28,6 +32,9 @@ const UserInfo = ({isMobile}) => {
     });
     return true;
   }
+
+  if (!userIsAuth)
+    return <></>;
 
   return (
     <div

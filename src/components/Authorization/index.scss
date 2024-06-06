@@ -4,33 +4,66 @@
 main.auth {
   position: relative;
   //width: 100%;
-  display: flex;
+  //display: flex;
+  display: grid;
+  grid-template-areas: 'name form'
+                        'capture form';
+  @media (screen and max-width: $mobile-max-width) {
+    display: grid;
+    grid-template-areas: 'name'
+                          'form'
+                          'capture';
+    justify-content: center;
+    align-items: center;
+  }
 
-  .left {
-    width: 55vw;
-    margin-right: 2vw;
+
+  //.left {
+  //  width: 55vw;
+  //  margin-right: 2vw;
 
     h1 {
       font-family: ferry, sans-serif;
       font-size: 2.5rem;
+      grid-area: name;
+      width: 60%;
+      margin-right: 2vw;
+      @media (screen and max-width: $mobile-max-width) {
+        font-size: 2.2rem;
+        margin: 0 0 5rem;
+        width: 100%;
+      }
     }
 
-    img {
+    & > img {
       width: 23vw;
       max-width: 350px;
       margin-left: 10vw;
+      grid-area: capture;
+      @media (screen and max-width: $mobile-max-width) {
+        width: 100%;
+        margin: 5vh 0;
+      }
     }
-  }
+  //}
   .auth-form {
+    display: flex;
+    flex-direction: column;
+
+    grid-area: form;
     position: relative;
     width: 30vw;
     max-width: 430px;
-    min-width: 250px;
+    min-width: 300px;
     margin-top: 5vh;
     //box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
     //border-radius: 10px;
     //
     //padding: 2rem 1.5rem;
+    @media (screen and max-width: $mobile-max-width) {
+      width: 100%;
+    }
+
     @include border-card;
 
     .auth-lock {
@@ -39,6 +72,10 @@ main.auth {
       top: 0;
       left: 0;
       transform: translate(-60%, -60%);
+      @media (screen and max-width: $mobile-max-width) {
+        left: 40%;
+        transform: translate(-50%, -80%);
+      }
     }
     .auth-header {
       display: grid;

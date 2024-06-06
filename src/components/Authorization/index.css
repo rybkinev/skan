@@ -40,30 +40,60 @@
 
 main.auth {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-areas: "name form" "capture form";
 }
-main.auth .left {
-  width: 55vw;
-  margin-right: 2vw;
+@media (max-width: 810px) {
+  main.auth {
+    display: grid;
+    grid-template-areas: "name" "form" "capture";
+    justify-content: center;
+    align-items: center;
+  }
 }
-main.auth .left h1 {
+main.auth h1 {
   font-family: ferry, sans-serif;
   font-size: 2.5rem;
+  grid-area: name;
+  width: 60%;
+  margin-right: 2vw;
 }
-main.auth .left img {
+@media (max-width: 810px) {
+  main.auth h1 {
+    font-size: 2.2rem;
+    margin: 0 0 5rem;
+    width: 100%;
+  }
+}
+main.auth > img {
   width: 23vw;
   max-width: 350px;
   margin-left: 10vw;
+  grid-area: capture;
+}
+@media (max-width: 810px) {
+  main.auth > img {
+    width: 100%;
+    margin: 5vh 0;
+  }
 }
 main.auth .auth-form {
+  display: flex;
+  flex-direction: column;
+  grid-area: form;
   position: relative;
   width: 30vw;
   max-width: 430px;
-  min-width: 250px;
+  min-width: 300px;
   margin-top: 5vh;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   padding: 2rem 1.5rem;
+}
+@media (max-width: 810px) {
+  main.auth .auth-form {
+    width: 100%;
+  }
 }
 main.auth .auth-form .auth-lock {
   position: absolute;
@@ -71,6 +101,12 @@ main.auth .auth-form .auth-lock {
   top: 0;
   left: 0;
   transform: translate(-60%, -60%);
+}
+@media (max-width: 810px) {
+  main.auth .auth-form .auth-lock {
+    left: 40%;
+    transform: translate(-50%, -80%);
+  }
 }
 main.auth .auth-form .auth-header {
   display: grid;
