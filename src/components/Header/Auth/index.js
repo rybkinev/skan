@@ -2,13 +2,15 @@ import React, {useEffect, useState} from "react";
 import api from "../../../API/api";
 import {logout} from "../../../store/userSlice";
 import UserInfo from "./UserInfo";
+import {useNavigate} from "react-router-dom";
 
 
 const Auth = ({ login, dispatch, callback, isMobile }) => {
-
+  const navigate = useNavigate();
   const handleLogout = () => {
     if (callback) callback();
     dispatch(logout());
+    navigate('/');
   }
 
   return(

@@ -86,7 +86,7 @@ main.search {
             padding: 1em;
             margin: 1rem 0;
             font-size: 0.9rem;
-            width: 50%;
+            width: 70%;
             border-radius: 5px;
             border: 1px solid $add-color5;
             box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
@@ -125,6 +125,9 @@ main.search {
           }
         }
 
+        .count-documents {
+          @include input-error;
+        }
       }
       .filter-form-right {
         display: flex;

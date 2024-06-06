@@ -4,11 +4,11 @@ import './index.css';
 
 const InputINN = ({inn, setInn}) => {
   const [error, setError] = useState('')
-  const [_inn, _setInn] = useState('')
+  const [_inn, _setInn] = useState(inn)
 
-  useEffect(() => {
-    _setInn(inn);
-  }, []);
+  // useEffect(() => {
+  //   _setInn(inn);
+  // }, []);
 
   useEffect(() => {
     setError('');

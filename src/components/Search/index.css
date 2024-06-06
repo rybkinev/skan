@@ -107,7 +107,7 @@ main.search .filter-form .filter-form-left > div input, main.search .filter-form
   padding: 1em;
   margin: 1rem 0;
   font-size: 0.9rem;
-  width: 50%;
+  width: 70%;
   border-radius: 5px;
   border: 1px solid #C7C7C7;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
@@ -149,6 +149,22 @@ main.search .filter-form .filter-form-left > div label .required {
   main.search .filter-form .filter-form-left > div label .required {
     font-size: 2.1rem;
   }
+}
+main.search .filter-form .filter-form-left .count-documents .input-error {
+  border: 1px solid #FF5959;
+  color: #FF5959;
+}
+main.search .filter-form .filter-form-left .count-documents .error-message {
+  color: #FF5959;
+  font-size: 1rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  transform: translate(0, 40%);
+}
+main.search .filter-form .filter-form-left .count-documents .error-label {
+  color: #FF5959;
 }
 main.search .filter-form .filter-form-right {
   display: flex;

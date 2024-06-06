@@ -141,15 +141,17 @@ article.article-card .article-footer .read-more:disabled {
     font-size: 1.4rem;
     height: 41px;
     width: 195px;
+    min-width: 150px;
   }
 }
-article.article-card .article-footer .read-more.iactive {
+article.article-card .article-footer .read-more.inactive {
   opacity: 0.5;
   cursor: auto;
 }
 article.article-card .article-footer .word-count {
   color: #949494;
   font-size: 1rem;
+  margin-left: 2rem;
 }
 @media (max-width: 810px) {
   article.article-card .article-footer .word-count {

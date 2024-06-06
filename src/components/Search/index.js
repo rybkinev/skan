@@ -4,6 +4,7 @@ import CheckboxBlock from "./CheckboxBlock";
 import RangeDate from "./RangeDate";
 import InputINN from "./InputINN";
 import {useNavigate} from "react-router-dom";
+import CountDocs from "./CountDocs";
 
 
 const Search = () => {
@@ -114,14 +115,7 @@ const Search = () => {
 
               </select>
             </div>
-            <div className='count-documents'>
-              <label>Количество документов в выдаче*</label>
-              <input
-                placeholder='От 1 до 1000'
-                onChange={e => setCountDocs(e.target.value)}
-                value={countDocs}
-              />
-            </div>
+            <CountDocs countDocs={countDocs} setCountDocs={setCountDocs}/>
             <RangeDate dateStart={dateStart} setDateStart={setDateStart} dateEnd={dateEnd} setDateEnd={setDateEnd}/>
           </div>
           <div className='filter-form-right'>
