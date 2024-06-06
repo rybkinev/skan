@@ -1,0 +1,12 @@
+@import "../../../assets/styles/Var";
+@import "../../../assets/styles/Global";
+
+
+header {
+
+  & > .menu-open {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+  }
+}

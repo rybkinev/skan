@@ -34,6 +34,10 @@
   font-weight: 400;
   font-style: normal;
 }
+.display-none {
+  display: none;
+}
+
 header {
   position: relative;
   width: 100%;
@@ -51,37 +55,60 @@ header {
   top: 0;
   height: 93px;
   background-color: #FFFFFF;
+  justify-content: center;
 }
-header > img {
+header > .brand-logo {
   object-fit: cover;
   height: 100%;
+  margin-right: auto;
 }
-header nav a {
-  margin: 0 3vw;
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
 }
-header .un-auth-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: end;
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
 }
-header .un-auth-container .divider {
-  width: 2px;
-  background-color: #7CE3E1;
-  margin: 0 1.5vw;
-  height: 1.65rem;
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
 }
-header .un-auth-container .button-login {
-  background-color: #7CE3E1;
-  padding: 0.3rem 0.7rem;
-  border-radius: 5px;
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+header .display-none {
+  display: none;
 }
 header .auth-container {
   position: relative;
   display: flex;
+  justify-content: end;
 }
 header .auth-container .user {
   display: flex;
+  align-items: center;
 }
 header .auth-container .user .login {
   display: flex;
@@ -94,54 +121,136 @@ header .auth-container .user .login .user-name {
   opacity: 70%;
   margin-bottom: 0.2rem;
 }
+@media (max-width: 810px) {
+  header .auth-container .user .login .user-name {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+}
 header .auth-container .user .login .logout {
   font-size: 0.7rem;
   opacity: 40%;
   cursor: pointer;
 }
+@media (max-width: 810px) {
+  header .auth-container .user .login .logout {
+    font-size: 1.2rem;
+  }
+}
+header .auth-container .user .login .logout:hover {
+  text-decoration: underline;
+}
 header .auth-container .user img {
   width: 40px;
+  height: 40px;
   object-fit: cover;
+  margin-left: 0.7vw;
 }
-header .auth-container .user-info {
-  position: absolute;
+@media (max-width: 810px) {
+  header .auth-container .user img {
+    width: 60px;
+    height: 60px;
+  }
+}
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ferry";
+  src: url("/src/assets/fonts/ferry_black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-medium";
+  src: url("/src/assets/fonts/Inter-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-regular";
+  src: url("/src/assets/fonts/Inter-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+header .display-none {
+  display: none;
+}
+header .un-auth-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 63px;
-  width: 175px;
-  right: 13rem;
-  top: 0;
-  transform: translate(0, -20%);
-  background-color: rgba(217, 217, 217, 0.3);
 }
-header .auth-container .user-info span {
-  font-size: 0.6rem;
-  position: relative;
-  opacity: 40%;
+@media (min-width: 811px) {
+  header .un-auth-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    margin-left: 8vw;
+  }
 }
-header .auth-container .user-info span:first-child {
-  margin-bottom: 0.2rem;
+@media (min-width: 811px) and (max-width: 1024px) {
+  header .un-auth-container {
+    margin-left: 2vw;
+  }
 }
-header .auth-container .user-info .left, header .auth-container .user-info .right {
-  display: flex;
-  flex-direction: column;
+@media (min-width: 811px) {
+  header .un-auth-container .divider {
+    width: 2px;
+    background-color: #7CE3E1;
+    margin: 0 1.5vw;
+    height: 1.65rem;
+  }
+  header .un-auth-container .button-login {
+    background-color: #7CE3E1;
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+  }
 }
-header .auth-container .user-info .left {
-  align-items: end;
-  margin-right: 0.5rem;
-}
-header .auth-container .user-info .left span:first-child {
-  margin-bottom: 0.5rem;
-}
-header .auth-container .user-info .right span {
-  opacity: 1;
-  font-size: 0.9rem;
-  font-family: Inter-medium, sans-serif;
-  font-weight: bold;
-}
-header .auth-container .user-info .right span:last-child {
-  color: #8AC540;
+@media (max-width: 810px) {
+  header .un-auth-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  header .un-auth-container .button-register {
+    opacity: 40%;
+    color: #FFFFFF;
+    margin-bottom: 2rem;
+    font-size: 1.15em;
+  }
+  header .un-auth-container .button-login {
+    border-radius: 5px;
+    border: none;
+    font-family: Inter-medium, sans-serif;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    height: 59px;
+    min-width: 305px;
+    font-size: 1.5em;
+    background-color: #7CE3E1;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header .un-auth-container .button-login:disabled {
+    opacity: 50%;
+    cursor: auto;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

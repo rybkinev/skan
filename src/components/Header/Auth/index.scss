@@ -1,0 +1,52 @@
+@import "../../../assets/styles/Var";
+@import "../../../assets/styles/Global";
+
+.auth-container {
+  position: relative;
+  display: flex;
+  justify-content: end;
+
+  .user {
+    display: flex;
+    align-items: center;
+
+    .login {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+
+      .user-name {
+        font-size: 0.9rem;
+        opacity: 70%;
+        margin-bottom: 0.2rem;
+        @media (screen and max-width: $mobile-max-width) {
+          font-size: 1.7rem;
+          margin-bottom: 1rem;
+        }
+      }
+      .logout {
+        font-size: 0.7rem;
+        opacity: 40%;
+        cursor: pointer;
+        @media (screen and max-width: $mobile-max-width) {
+          font-size: 1.2rem;
+        }
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      margin-left: .7vw;
+      @media (screen and max-width: $mobile-max-width) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}

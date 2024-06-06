@@ -1,0 +1,52 @@
+@import "../../../assets/styles/Var";
+@import "../../../assets/styles/Global";
+
+.un-auth-container {
+  display: flex;
+  
+  @media (screen and min-width: ($mobile-max-width + 1)) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    margin-left: 8vw;
+
+    @media (screen and max-width: 1024px){
+      margin-left: 2vw;
+    }
+
+    .divider {
+      width: 2px;
+      background-color: $add-color2;
+      margin: 0 1.5vw;
+      height: 1.65rem;
+    }
+
+    .button-login{
+      background-color: $add-color2;
+      padding: 0.3rem 0.7rem;
+      border-radius: 5px;
+    }
+  }
+
+  @media (screen and max-width: $mobile-max-width) {
+    flex-direction: column;
+    align-items: center;
+
+    .button-register {
+      opacity: 40%;
+      color: $main-color3;
+      margin-bottom: 2rem;
+      font-size: 1.15em;
+    }
+    .button-login {
+      @include button;
+
+      font-size: 1.5em;
+      background-color: $add-color2;
+      color: $main-color2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

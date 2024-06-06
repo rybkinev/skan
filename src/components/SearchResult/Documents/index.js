@@ -50,7 +50,7 @@ const Documents = ({documentsData}) => {
       </div>
       {displayedDocs < documents.length && (
         <button
-          className="button show-more"
+          className="show-more"
           onClick={showMoreArticles}
         >
           Показать больше

@@ -1,0 +1,58 @@
+@import "../../../../assets/styles/Var";
+@import "../../../../assets/styles/Global";
+
+
+.user-info {
+
+  //position: absolute;
+  // adaptive test
+  position: relative;
+  margin-right: 6vw;
+  // --
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 63px;
+  width: 175px;
+
+  background-color: rgba(red($add-color7), green($add-color7), blue($add-color7), 0.3);
+
+  span {
+    font-size: 0.6rem;
+    position: relative;
+    opacity: 40%;
+
+    &:first-child {
+      margin-bottom: .2rem;
+    }
+  }
+
+  .left, .right {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .left {
+    align-items: end;
+    margin-right: 0.5rem;
+
+    span:first-child {
+      margin-bottom: .5rem;
+    }
+  }
+  .right {
+
+    span {
+      opacity: 1;
+      font-size: 0.9rem;
+      font-family: Inter-medium, sans-serif;
+      font-weight: bold;
+
+      &:last-child {
+        color: $add-color8;
+      }
+    }
+  }
+
+}

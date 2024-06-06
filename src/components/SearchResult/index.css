@@ -34,6 +34,10 @@
   font-weight: 400;
   font-style: normal;
 }
+.display-none {
+  display: none;
+}
+
 main.search-results {
   position: relative;
   display: flex;
