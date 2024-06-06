@@ -22,6 +22,9 @@
     font-size: 0.6rem;
     position: relative;
     opacity: 40%;
+    @media (screen and max-width: $mobile-max-width) {
+      font-size: 0.8rem;
+    }
 
     &:first-child {
       margin-bottom: .2rem;
@@ -48,6 +51,9 @@
       font-size: 0.9rem;
       font-family: Inter-medium, sans-serif;
       font-weight: bold;
+      @media (screen and max-width: $mobile-max-width) {
+        font-size: 1.1rem;
+      }
 
       &:last-child {
         color: $add-color8;

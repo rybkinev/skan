@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import '../index.css';
 import './index.css';
 import Menu from "./Menu";
+import UserInfo from "../Auth/UserInfo";
 
 
 const MobileHeader = () => {
@@ -15,6 +16,7 @@ const MobileHeader = () => {
         src='/assets/img/brand-logo/green-logo.png'
         alt='Skan logo'
       />
+      <UserInfo/>
       <img
         className='menu-open'
         src='/assets/img/mobile/header/menu-open.png'

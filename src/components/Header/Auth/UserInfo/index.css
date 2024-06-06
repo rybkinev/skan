@@ -53,6 +53,11 @@
   position: relative;
   opacity: 40%;
 }
+@media (max-width: 810px) {
+  .user-info span {
+    font-size: 0.8rem;
+  }
+}
 .user-info span:first-child {
   margin-bottom: 0.2rem;
 }
@@ -72,6 +77,11 @@
   font-size: 0.9rem;
   font-family: Inter-medium, sans-serif;
   font-weight: bold;
+}
+@media (max-width: 810px) {
+  .user-info .right span {
+    font-size: 1.1rem;
+  }
 }
 .user-info .right span:last-child {
   color: #8AC540;
